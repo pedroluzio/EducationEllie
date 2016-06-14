@@ -106,5 +106,10 @@ namespace Ellie
         {
             this.Close();
         }
+
+        private void info_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

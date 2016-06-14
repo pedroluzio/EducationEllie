@@ -51,7 +51,7 @@
             this.btn_contar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_contar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_contar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_contar.Location = new System.Drawing.Point(100, 106);
+            this.btn_contar.Location = new System.Drawing.Point(92, 101);
             this.btn_contar.Margin = new System.Windows.Forms.Padding(50);
             this.btn_contar.Name = "btn_contar";
             this.btn_contar.Size = new System.Drawing.Size(100, 100);
@@ -72,6 +72,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Money";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_contas
@@ -83,7 +84,7 @@
             this.btn_contas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_contas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_contas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_contas.Location = new System.Drawing.Point(186, 230);
+            this.btn_contas.Location = new System.Drawing.Point(228, 234);
             this.btn_contas.Margin = new System.Windows.Forms.Padding(50);
             this.btn_contas.Name = "btn_contas";
             this.btn_contas.Size = new System.Drawing.Size(100, 100);
@@ -117,6 +118,7 @@
             this.button5.TabIndex = 19;
             this.button5.Text = "(Not Click Me!!)\r\nVai ser para ver se há novas versões";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pic_opcoes
@@ -140,6 +142,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "(Click Me!!)\r\nEste form irá aparecer aquando do arranque da aplicação";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button4
