@@ -12,6 +12,8 @@ using System.Net;
 using System.IO;
 using System.Reflection;
 using System.Diagnostics;
+using System.Net.Mail;
+using System.Globalization;
 
 namespace Ellie
 {
@@ -27,6 +29,38 @@ namespace Ellie
         {
             btn_contar.Cursor = Cursors.Hand;
             btn_contas.Cursor = Cursors.Hand;
+
+            MailMessage msg = new MailMessage();
+
+            msg.From = new MailAddress("education.ellie.project@gmail.com");
+            msg.To.Add("education.ellie.project@gmail.com");
+            string culture = CultureInfo.CurrentCulture.EnglishName;
+            string country = culture.Substring(culture.IndexOf('(') + 1, culture.LastIndexOf(')') - culture.IndexOf('(') - 1);
+            msg.Subject = "New Access - "+country;
+            msg.Body = DateTime.Now.ToString();
+            SmtpClient client = new SmtpClient();
+
+            client.UseDefaultCredentials = true;
+            client.Host = "smtp.gmail.com";
+            client.Port = 587;
+            client.EnableSsl = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.Credentials = new NetworkCredential("education.ellie.project@gmail.com", "educationellie123");
+            client.Timeout = 20000;
+            try
+            {
+                client.Send(msg);
+            }
+            catch 
+            {
+            }
+            finally
+            {
+                msg.Dispose();
+            }
+
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
