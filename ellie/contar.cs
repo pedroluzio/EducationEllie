@@ -105,6 +105,7 @@ namespace Ellie
             }
             lbl_errado.Tag = Convert.ToInt32(lbl_errado.Tag) + 1;
             lbl_errado.Text = lbl_errado.Tag.ToString();
+            desenhaAbelhas();
         }
 
         public void numeroEscolhido(int num)

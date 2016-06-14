@@ -36,8 +36,10 @@ namespace Ellie
             msg.To.Add("education.ellie.project@gmail.com");
             string culture = CultureInfo.CurrentCulture.EnglishName;
             string country = culture.Substring(culture.IndexOf('(') + 1, culture.LastIndexOf(')') - culture.IndexOf('(') - 1);
-            msg.Subject = "New Access - "+country;
-            msg.Body = DateTime.Now.ToString();
+            msg.Subject = "New Access - " + country;
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
+            msg.Body = userName + Environment.NewLine + myIP + Environment.NewLine + DateTime.Now.ToString();
             SmtpClient client = new SmtpClient();
 
             client.UseDefaultCredentials = true;
@@ -51,15 +53,16 @@ namespace Ellie
             {
                 client.Send(msg);
             }
-            catch 
+            catch
             {
+
             }
             finally
             {
                 msg.Dispose();
             }
 
-            
+
 
         }
 
@@ -77,7 +80,7 @@ namespace Ellie
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -106,7 +109,7 @@ namespace Ellie
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -114,7 +117,7 @@ namespace Ellie
             WebRequest wr = WebRequest.Create(new Uri("http://pappl.bugs3.com/version.txt"));
             WebResponse ws = wr.GetResponse();
             StreamReader sr = new StreamReader(ws.GetResponseStream());
-            
+
             string currentVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             string newVersion = sr.ReadLine();
             if (currentVersion == newVersion)
@@ -130,7 +133,7 @@ namespace Ellie
                 Process.Start(file.FullName);
                 this.Close();
             }
-                  
+
         }
 
         private void pic_opcoes_Click(object sender, EventArgs e)
