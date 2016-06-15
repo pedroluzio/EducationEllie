@@ -203,6 +203,16 @@ namespace Ellie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btn0 {
+            get {
+                object obj = ResourceManager.GetObject("btn0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn1 {
             get {
                 object obj = ResourceManager.GetObject("btn1", resourceCulture);
@@ -411,6 +421,16 @@ namespace Ellie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap igual {
+            get {
+                object obj = ResourceManager.GetObject("igual", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_certo {
             get {
                 object obj = ResourceManager.GetObject("img_certo", resourceCulture);
@@ -444,6 +464,16 @@ namespace Ellie.Properties {
         internal static System.Drawing.Bitmap livro {
             get {
                 object obj = ResourceManager.GetObject("livro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mais {
+            get {
+                object obj = ResourceManager.GetObject("mais", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -534,6 +564,16 @@ namespace Ellie.Properties {
         internal static System.Drawing.Bitmap mascoteGif1 {
             get {
                 object obj = ResourceManager.GetObject("mascoteGif1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menos {
+            get {
+                object obj = ResourceManager.GetObject("menos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -664,6 +704,16 @@ namespace Ellie.Properties {
         internal static System.Drawing.Bitmap torreMoedas {
             get {
                 object obj = ResourceManager.GetObject("torreMoedas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vezes {
+            get {
+                object obj = ResourceManager.GetObject("vezes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

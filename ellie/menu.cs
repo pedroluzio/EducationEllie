@@ -61,7 +61,7 @@ namespace Ellie
             {
                 msg.Dispose();
             }
-
+            
 
 
         }
@@ -80,7 +80,8 @@ namespace Ellie
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            contas frmContas = new contas(sound);
+            frmContas.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)

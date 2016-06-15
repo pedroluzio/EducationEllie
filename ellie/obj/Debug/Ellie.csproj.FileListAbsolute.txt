@@ -13,3 +13,4 @@ C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.nome.resources
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.csproj.GenerateResource.Cache
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.exe
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.pdb
+C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.contas.resources

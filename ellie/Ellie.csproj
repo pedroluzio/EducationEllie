@@ -50,6 +50,36 @@
   <PropertyGroup>
     <ApplicationIcon>mascote.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DED8E380E5A4A7AF3C6096815EEE720C8D35C8D7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Ellie_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,6 +99,12 @@
     </Compile>
     <Compile Include="contar.Designer.cs">
       <DependentUpon>contar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="contas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contas.Designer.cs">
+      <DependentUpon>contas.cs</DependentUpon>
     </Compile>
     <Compile Include="info.cs">
       <SubType>Form</SubType>
@@ -111,6 +147,9 @@
     <EmbeddedResource Include="contar.resx">
       <DependentUpon>contar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="contas.resx">
+      <DependentUpon>contas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="info.resx">
       <DependentUpon>info.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +178,8 @@
     <EmbeddedResource Include="nome.resx">
       <DependentUpon>nome.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Ellie_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -279,6 +320,11 @@
   <ItemGroup>
     <Content Include="Icon.ico" />
     <Content Include="mascote.ico" />
+    <None Include="Resources\btn0.png" />
+    <None Include="Resources\vezes.png" />
+    <None Include="Resources\menos.png" />
+    <None Include="Resources\mais.png" />
+    <None Include="Resources\igual.png" />
     <None Include="Resources\aplicar.png" />
     <None Include="Resources\aplicar.jpg" />
     <None Include="Resources\aemgn.jpg" />
