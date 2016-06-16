@@ -31,12 +31,13 @@ namespace Ellie
         public void mudaNumeros(Boolean mantem)
         {
             Random rdn = new Random();
+
+            sinal = mantem ? sinal : rdn.Next(1, Convert.ToInt32(lbl_certas.Text) > 10 ? 4 : 3);
             n1 = rdn.Next(2, 9);
             do
             {
-                n2 = rdn.Next(1, 9);
+                n2 = rdn.Next(1, sinal==3?4:9);
             } while (n2 >= n1);
-            sinal = mantem ? sinal : rdn.Next(1, Convert.ToInt32(lbl_certas.Text)>10?4:3);
             switch (n1)
             {
                 case 1:

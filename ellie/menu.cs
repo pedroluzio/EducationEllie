@@ -14,6 +14,8 @@ using System.Reflection;
 using System.Diagnostics;
 using System.Net.Mail;
 using System.Globalization;
+using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace Ellie
 {
@@ -39,7 +41,7 @@ namespace Ellie
             msg.Subject = "New Access - " + country;
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
-            msg.Body = userName + Environment.NewLine + myIP + Environment.NewLine + DateTime.Now.ToString();
+            msg.Body = userName + Environment.NewLine + myIP + Environment.NewLine + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
             SmtpClient client = new SmtpClient();
 
             client.UseDefaultCredentials = true;
@@ -61,7 +63,37 @@ namespace Ellie
             {
                 msg.Dispose();
             }
+
             
+            
+
+            string sql = "INSERT INTO access(country, user, date, ip)VALUES('"+country+"', '"+userName+"', '"+ DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "','"+myIP+"'); ";
+
+            MySqlConnectionStringBuilder conn_string = new MySqlConnectionStringBuilder();
+            conn_string.Server = "mysql3.gear.host";
+            conn_string.UserID = "access";
+            conn_string.Password = "Ar4ebL2_?1nC";
+            conn_string.Database = "access";
+
+            MySqlConnection conn = new MySqlConnection(conn_string.ToString());
+            //MySqlCommand cmd = conn.CreateCommand();
+
+            try
+            {
+                conn.Open();
+
+
+                MySqlCommand MyCommand2 = new MySqlCommand(sql, conn);
+                MySqlDataReader MyReader2;
+                MyReader2 = MyCommand2.ExecuteReader();
+                while (MyReader2.Read())
+                {
+                }
+                conn.Close();
+            }
+            catch { }
+
+    
 
 
         }

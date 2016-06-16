@@ -1,7 +1,6 @@
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.exe.config
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.exe
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.pdb
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.csprojResolveAssemblyReference.cache
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.contar.resources
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.info.resources
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.mascote.resources
