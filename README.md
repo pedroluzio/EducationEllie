@@ -10,6 +10,7 @@ Ellie name comes from the software mascot is an owl (symbol of knowledge) red, i
 
 ### Authors and Contributors
 Originally the software was developed by Pedro Luzio @pedroluzio, Programming student in Portugal
+Also developed by Janynne Gomes @devnetgomez, Programming teacher in Brazil
 
 ### Support or Contact
 Having trouble with software? Contact pedro.luzio.cloud@gmail.com and we’ll help you sort it out.
