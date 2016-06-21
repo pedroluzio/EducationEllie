@@ -45,8 +45,8 @@ namespace Ellie
         {
             if(_text=="início")
             {
-                nome teste = new nome();
-                teste.Show();
+                nome nome = new nome();
+                nome.ShowDialog();
                 this.Close();
             }
             if(_text=="ajuda nome")

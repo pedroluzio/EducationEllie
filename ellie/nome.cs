@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,17 +23,19 @@ namespace Ellie
         private void btn_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button; 
-            label1.Text += btn.Tag;
+            lblNome.Text += btn.Tag;
         }
 
         private void teste_Load(object sender, EventArgs e)
         {
+            System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile("Crayon.ttf");
             List<Button> buttons = new List<Button>();
             for (int i = 65; i <= 90; i++)
             {
                 Button newButton = new Button();
                 newButton.Size = new Size(65,65);
-                newButton.Font = new Font("CF Crayons", 30);
+                newButton.Font = new Font(privateFonts.Families[0], 40);
                 newButton.Text = ((char)i).ToString();
                 newButton.Tag = ((char)i).ToString();
                 newButton.FlatStyle = FlatStyle.Flat;
@@ -60,7 +63,10 @@ namespace Ellie
             spaceButton.Click += new EventHandler(btn_Click);
             buttons.Add(spaceButton);
             flowLayoutPanel2.Controls.Add(spaceButton);
+
             
+            lblTitulo.Font = new Font(privateFonts.Families[0], 50);
+
 
 
         }
@@ -69,29 +75,36 @@ namespace Ellie
         {
 
             if (aberto)
-                pictureBox1.Image = Properties.Resources.mascote;
+                picEllie.Image = Properties.Resources.mascote;
             else
-                pictureBox1.Image = Properties.Resources.mascote1;
+                picEllie.Image = Properties.Resources.mascote1;
 
             aberto = !aberto;
                 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+
+        private void picEllie_Click(object sender, EventArgs e)
         {
+            mascote mascote = new mascote("ajuda nome");
+            mascote.Show();
+        }
+
+        private void picHelp_Click(object sender, EventArgs e)
+        {
+            mascote mascote = new mascote("ajuda nome");
+            mascote.Show();
+        }
+
+        private void btnApaga_Click(object sender, EventArgs e)
+        {
+            lblNome.Text = lblNome.Text.Length>0?lblNome.Text.Remove(lblNome.Text.Length - 1):lblNome.Text;
+        }
+
+        private void btnEnvia_Click(object sender, EventArgs e)
+        {
+            //Guarda aqui o nome para inserção no SQLite.
             this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            mascote mascote = new mascote("ajuda nome");
-            mascote.Show();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            mascote mascote = new mascote("ajuda nome");
-            mascote.Show();
         }
 
 

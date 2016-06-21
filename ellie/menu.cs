@@ -32,7 +32,10 @@ namespace Ellie
             btn_contar.Cursor = Cursors.Hand;
             btn_contas.Cursor = Cursors.Hand;
 
-            MailMessage msg = new MailMessage();
+            mascote mascote = new mascote("início");
+            mascote.ShowDialog();
+
+            /*MailMessage msg = new MailMessage();
 
             msg.From = new MailAddress("education.ellie.project@gmail.com");
             msg.To.Add("education.ellie.project@gmail.com");
@@ -91,9 +94,9 @@ namespace Ellie
                 }
                 conn.Close();
             }
-            catch { }
+            catch { }*/
 
-    
+
 
 
         }
@@ -106,8 +109,6 @@ namespace Ellie
 
         private void button2_Click(object sender, EventArgs e)
         {
-            money frmMoney = new money();
-            frmMoney.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
