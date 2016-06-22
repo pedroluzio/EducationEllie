@@ -14,3 +14,6 @@ C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Release\Ellie.csproj.Genera
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Release\Ellie.exe
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Release\Ellie.pdb
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Release\MySql.Data.DLL
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\bin\Release\Ellie.exe.config
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Release\Ellie.exe
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Release\Ellie.pdb

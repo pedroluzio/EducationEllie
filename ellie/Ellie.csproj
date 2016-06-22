@@ -72,7 +72,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>DED8E380E5A4A7AF3C6096815EEE720C8D35C8D7</ManifestCertificateThumbprint>
@@ -98,67 +98,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="contar.cs">
+    <Compile Include="frmContar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="contar.Designer.cs">
-      <DependentUpon>contar.cs</DependentUpon>
+    <Compile Include="frmContar.Designer.cs">
+      <DependentUpon>frmContar.cs</DependentUpon>
     </Compile>
-    <Compile Include="contas.cs">
+    <Compile Include="frmContas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="contas.Designer.cs">
-      <DependentUpon>contas.cs</DependentUpon>
+    <Compile Include="frmContas.Designer.cs">
+      <DependentUpon>frmContas.cs</DependentUpon>
     </Compile>
-    <Compile Include="info.cs">
+    <Compile Include="frmInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="info.Designer.cs">
-      <DependentUpon>info.cs</DependentUpon>
+    <Compile Include="frmInfo.Designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="mascote.cs">
+    <Compile Include="frmMascote.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mascote.Designer.cs">
-      <DependentUpon>mascote.cs</DependentUpon>
+    <Compile Include="frmMascote.Designer.cs">
+      <DependentUpon>frmMascote.cs</DependentUpon>
     </Compile>
-    <Compile Include="menu.cs">
+    <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu.Designer.cs">
-      <DependentUpon>menu.cs</DependentUpon>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="opcoes.cs">
+    <Compile Include="frmOpcoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="opcoes.Designer.cs">
-      <DependentUpon>opcoes.cs</DependentUpon>
+    <Compile Include="frmOpcoes.Designer.cs">
+      <DependentUpon>frmOpcoes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="nome.cs">
+    <Compile Include="frmNome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="nome.Designer.cs">
-      <DependentUpon>nome.cs</DependentUpon>
+    <Compile Include="frmNome.Designer.cs">
+      <DependentUpon>frmNome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="contar.resx">
-      <DependentUpon>contar.cs</DependentUpon>
+    <EmbeddedResource Include="frmContar.resx">
+      <DependentUpon>frmContar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="contas.resx">
-      <DependentUpon>contas.cs</DependentUpon>
+    <EmbeddedResource Include="frmContas.resx">
+      <DependentUpon>frmContas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="info.resx">
-      <DependentUpon>info.cs</DependentUpon>
+    <EmbeddedResource Include="frmInfo.resx">
+      <DependentUpon>frmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mascote.resx">
-      <DependentUpon>mascote.cs</DependentUpon>
+    <EmbeddedResource Include="frmMascote.resx">
+      <DependentUpon>frmMascote.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menu.resx">
-      <DependentUpon>menu.cs</DependentUpon>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="opcoes.resx">
-      <DependentUpon>opcoes.cs</DependentUpon>
+    <EmbeddedResource Include="frmOpcoes.resx">
+      <DependentUpon>frmOpcoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -170,8 +170,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="nome.resx">
-      <DependentUpon>nome.cs</DependentUpon>
+    <EmbeddedResource Include="frmNome.resx">
+      <DependentUpon>frmNome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">

@@ -13,3 +13,18 @@ C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.csproj.Generate
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.exe
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.pdb
 C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.contas.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\bin\Debug\Ellie.exe.config
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.exe
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.pdb
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\bin\Debug\Ellie.exe
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\bin\Debug\Ellie.pdb
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.csprojResolveAssemblyReference.cache
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmContar.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmContas.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmInfo.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmMascote.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmMenu.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmOpcoes.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.Properties.Resources.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmNome.resources
+C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.csproj.GenerateResource.Cache
