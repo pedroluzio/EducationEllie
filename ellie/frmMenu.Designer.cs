@@ -29,51 +29,52 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            this.btn_contar = new System.Windows.Forms.Button();
-            this.btn_contas = new System.Windows.Forms.Button();
+            this.btnContar = new System.Windows.Forms.Button();
+            this.btnContas = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pic_opcoes = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnJuntarCores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_opcoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_contar
+            // btnContar
             // 
-            this.btn_contar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_contar.BackgroundImage = global::Ellie.Properties.Resources.MenuContar;
-            this.btn_contar.FlatAppearance.BorderSize = 0;
-            this.btn_contar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_contar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_contar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_contar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_contar.Location = new System.Drawing.Point(92, 101);
-            this.btn_contar.Margin = new System.Windows.Forms.Padding(50);
-            this.btn_contar.Name = "btn_contar";
-            this.btn_contar.Size = new System.Drawing.Size(100, 100);
-            this.btn_contar.TabIndex = 0;
-            this.btn_contar.UseVisualStyleBackColor = false;
-            this.btn_contar.Click += new System.EventHandler(this.button1_Click);
+            this.btnContar.BackColor = System.Drawing.Color.Transparent;
+            this.btnContar.BackgroundImage = global::Ellie.Properties.Resources.MenuContar;
+            this.btnContar.FlatAppearance.BorderSize = 0;
+            this.btnContar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnContar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnContar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContar.Location = new System.Drawing.Point(92, 101);
+            this.btnContar.Margin = new System.Windows.Forms.Padding(50);
+            this.btnContar.Name = "btnContar";
+            this.btnContar.Size = new System.Drawing.Size(100, 100);
+            this.btnContar.TabIndex = 0;
+            this.btnContar.UseVisualStyleBackColor = false;
+            this.btnContar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btn_contas
+            // btnContas
             // 
-            this.btn_contas.BackColor = System.Drawing.Color.Transparent;
-            this.btn_contas.BackgroundImage = global::Ellie.Properties.Resources.MenuContas;
-            this.btn_contas.FlatAppearance.BorderSize = 0;
-            this.btn_contas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_contas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_contas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_contas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_contas.Location = new System.Drawing.Point(228, 234);
-            this.btn_contas.Margin = new System.Windows.Forms.Padding(50);
-            this.btn_contas.Name = "btn_contas";
-            this.btn_contas.Size = new System.Drawing.Size(100, 100);
-            this.btn_contas.TabIndex = 2;
-            this.btn_contas.UseVisualStyleBackColor = false;
-            this.btn_contas.Click += new System.EventHandler(this.button4_Click);
+            this.btnContas.BackColor = System.Drawing.Color.Transparent;
+            this.btnContas.BackgroundImage = global::Ellie.Properties.Resources.MenuContas;
+            this.btnContas.FlatAppearance.BorderSize = 0;
+            this.btnContas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnContas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnContas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContas.Location = new System.Drawing.Point(228, 234);
+            this.btnContas.Margin = new System.Windows.Forms.Padding(50);
+            this.btnContas.Name = "btnContas";
+            this.btnContas.Size = new System.Drawing.Size(100, 100);
+            this.btnContas.TabIndex = 2;
+            this.btnContas.UseVisualStyleBackColor = false;
+            this.btnContas.Click += new System.EventHandler(this.button4_Click);
             // 
             // button11
             // 
@@ -157,25 +158,43 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // menu
+            // btnJuntarCores
+            // 
+            this.btnJuntarCores.BackColor = System.Drawing.Color.Transparent;
+            this.btnJuntarCores.BackgroundImage = global::Ellie.Properties.Resources.menuJuntarCores;
+            this.btnJuntarCores.FlatAppearance.BorderSize = 0;
+            this.btnJuntarCores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnJuntarCores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnJuntarCores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJuntarCores.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJuntarCores.Location = new System.Drawing.Point(363, 101);
+            this.btnJuntarCores.Margin = new System.Windows.Forms.Padding(50);
+            this.btnJuntarCores.Name = "btnJuntarCores";
+            this.btnJuntarCores.Size = new System.Drawing.Size(100, 100);
+            this.btnJuntarCores.TabIndex = 24;
+            this.btnJuntarCores.UseVisualStyleBackColor = false;
+            this.btnJuntarCores.Click += new System.EventHandler(this.btnJuntarCores_Click);
+            // 
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.btnJuntarCores);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pic_opcoes);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button11);
-            this.Controls.Add(this.btn_contas);
-            this.Controls.Add(this.btn_contar);
+            this.Controls.Add(this.btnContas);
+            this.Controls.Add(this.btnContar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "menu";
+            this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu";
             this.Load += new System.EventHandler(this.menu_Load);
@@ -187,13 +206,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_contar;
-        private System.Windows.Forms.Button btn_contas;
+        private System.Windows.Forms.Button btnContar;
+        private System.Windows.Forms.Button btnContas;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pic_opcoes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnJuntarCores;
     }
 }

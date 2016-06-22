@@ -29,8 +29,8 @@ namespace Ellie
         bool sound = true;
         private void menu_Load(object sender, EventArgs e)
         {
-            btn_contar.Cursor = Cursors.Hand;
-            btn_contas.Cursor = Cursors.Hand;
+            btnContar.Cursor = Cursors.Hand;
+            btnContas.Cursor = Cursors.Hand;
 
             frmMascote mascote = new frmMascote("início");
             mascote.ShowDialog();
@@ -195,6 +195,12 @@ namespace Ellie
         {
             frmInfo info = new frmInfo();
             info.Show();
+        }
+
+        private void btnJuntarCores_Click(object sender, EventArgs e)
+        {
+            frmJuntarCores cores = new frmJuntarCores(sound);
+            cores.Show();
         }
     }
 }
