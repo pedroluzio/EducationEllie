@@ -19,9 +19,9 @@ using System.Data.SqlClient;
 
 namespace Ellie
 {
-    public partial class menu : Form
+    public partial class frmMenu : Form
     {
-        public menu()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -29,10 +29,13 @@ namespace Ellie
         bool sound = true;
         private void menu_Load(object sender, EventArgs e)
         {
-            btn_contar.Cursor = Cursors.Hand;
-            btn_contas.Cursor = Cursors.Hand;
+            btnContar.Cursor = Cursors.Hand;
+            btnContas.Cursor = Cursors.Hand;
 
-            MailMessage msg = new MailMessage();
+            frmMascote mascote = new frmMascote("início");
+            mascote.ShowDialog();
+
+            /*MailMessage msg = new MailMessage();
 
             msg.From = new MailAddress("education.ellie.project@gmail.com");
             msg.To.Add("education.ellie.project@gmail.com");
@@ -91,28 +94,26 @@ namespace Ellie
                 }
                 conn.Close();
             }
-            catch { }
+            catch { }*/
 
-    
+
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            contar frmContar = new contar(sound);
+            frmContar frmContar = new frmContar(sound);
             frmContar.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            money frmMoney = new money();
-            frmMoney.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            contas frmContas = new contas(sound);
+            frmContas frmContas = new frmContas(sound);
             frmContas.Show();
         }
 
@@ -171,13 +172,13 @@ namespace Ellie
 
         private void pic_opcoes_Click(object sender, EventArgs e)
         {
-            opcoes opcoes = new opcoes();
+            frmOpcoes opcoes = new frmOpcoes();
             opcoes.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            mascote mascote = new mascote("início");
+            frmMascote mascote = new frmMascote("início");
             mascote.Show();
         }
 
@@ -192,8 +193,14 @@ namespace Ellie
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            info info = new info();
+            frmInfo info = new frmInfo();
             info.Show();
+        }
+
+        private void btnJuntarCores_Click(object sender, EventArgs e)
+        {
+            frmJuntarCores cores = new frmJuntarCores(sound);
+            cores.Show();
         }
     }
 }
