@@ -69,5 +69,10 @@ namespace EllieLogicShared
         {
             throw new NotImplementedException();
         }
+
+        public void exibirPlacar()
+        {
+
+        }
     }
 }

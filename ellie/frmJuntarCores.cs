@@ -67,8 +67,9 @@ namespace Ellie
                 player.Play();
                 Thread.Sleep(2000);
             }
-            lblCertas.Tag = Convert.ToInt32(lblCertas.Tag) + 1;
-            lblCertas.Text = lblCertas.Tag.ToString();
+
+            placar1.atualizarPlacar(Placar.RESULTADO_JOGADA.ACERTO);
+            
             jogada = 1;
             geraCor(cor);
         }
@@ -81,8 +82,8 @@ namespace Ellie
                 player.Play();
                 Thread.Sleep(2000);
             }
-            lblErradas.Tag = Convert.ToInt32(lblErradas.Tag) + 1;
-            lblErradas.Text = lblErradas.Tag.ToString();
+            placar1.atualizarPlacar(Placar.RESULTADO_JOGADA.ERRO);
+
             jogada = 1;
         }
 
