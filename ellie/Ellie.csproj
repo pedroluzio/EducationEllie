@@ -360,6 +360,12 @@
     <None Include="Resources\MenuContas.png" />
     <None Include="Resources\MenuContar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\EllieLogicShared.csproj">
+      <Project>{47bb0912-32bc-4f26-a1e5-a741d199c59d}</Project>
+      <Name>EllieLogicShared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

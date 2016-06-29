@@ -8,17 +8,20 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EllieLogicShared;
 
 namespace Ellie
 {
     public partial class frmJuntarCores : Form
     {
+        EllieLogicShared.GameControl GameControl;
         Boolean _sound;
         public frmJuntarCores(Boolean sound)
         {
             InitializeComponent();
             pics = new PictureBox[] { picCor1, picCor2, picCor3, picCor4, picCor5, picCor6, picCor7, picCor8 };
             this._sound = sound;
+            GameControl = new GameControl();
         }
         private PictureBox[] pics;
         public ICollection<PictureBox> Pics
@@ -95,7 +98,7 @@ namespace Ellie
             else
             {
                 if (corTentativa == pic.Image)
-                    certo();
+                    GameControl.validarJogada();// certo();
                 else
                 {
                     foreach (PictureBox picAll in pics)
@@ -115,6 +118,8 @@ namespace Ellie
 
         private void frmParesCores_Load(object sender, EventArgs e)
         {
+            this.GameControl = new GameControl();
+
             cores = new Bitmap[] { Properties.Resources.corAmarelo, Properties.Resources.corBranco, Properties.Resources.corAzul, Properties.Resources.corVerde, Properties.Resources.corVermelho, Properties.Resources.corLaranja, Properties.Resources.corRosa, };
             foreach (PictureBox pic in pics)
                 pic.Click += new EventHandler(pic_Click);
