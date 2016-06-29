@@ -38,10 +38,7 @@
             this.picCor5 = new System.Windows.Forms.PictureBox();
             this.picCor2 = new System.Windows.Forms.PictureBox();
             this.picCor4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblErradas = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblCertas = new System.Windows.Forms.Label();
+            this.placar1 = new EllieLogicShared.Placar();
             ((System.ComponentModel.ISupportInitialize)(this.picCor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor8)).BeginInit();
@@ -50,8 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCor5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSair
@@ -76,7 +71,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("DK Crayon Crumble", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(44, 40);
             this.label1.Name = "label1";
@@ -158,57 +153,13 @@
             this.picCor4.TabIndex = 35;
             this.picCor4.TabStop = false;
             // 
-            // pictureBox2
+            // placar1
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Ellie.Properties.Resources.img_errado;
-            this.pictureBox2.Location = new System.Drawing.Point(47, 451);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 39;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblErradas
-            // 
-            this.lblErradas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblErradas.AutoSize = true;
-            this.lblErradas.BackColor = System.Drawing.Color.Transparent;
-            this.lblErradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErradas.ForeColor = System.Drawing.Color.White;
-            this.lblErradas.Location = new System.Drawing.Point(83, 447);
-            this.lblErradas.Name = "lblErradas";
-            this.lblErradas.Size = new System.Drawing.Size(29, 31);
-            this.lblErradas.TabIndex = 38;
-            this.lblErradas.Tag = "0";
-            this.lblErradas.Text = "0";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Ellie.Properties.Resources.img_certo;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 415);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblCertas
-            // 
-            this.lblCertas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblCertas.AutoSize = true;
-            this.lblCertas.BackColor = System.Drawing.Color.Transparent;
-            this.lblCertas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCertas.ForeColor = System.Drawing.Color.White;
-            this.lblCertas.Location = new System.Drawing.Point(83, 410);
-            this.lblCertas.Name = "lblCertas";
-            this.lblCertas.Size = new System.Drawing.Size(29, 31);
-            this.lblCertas.TabIndex = 36;
-            this.lblCertas.Tag = "0";
-            this.lblCertas.Text = "0";
+            this.placar1.BackColor = System.Drawing.Color.Transparent;
+            this.placar1.Location = new System.Drawing.Point(53, 320);
+            this.placar1.Name = "placar1";
+            this.placar1.Size = new System.Drawing.Size(150, 150);
+            this.placar1.TabIndex = 36;
             // 
             // frmJuntarCores
             // 
@@ -217,10 +168,7 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblErradas);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblCertas);
+            this.Controls.Add(this.placar1);
             this.Controls.Add(this.picCor4);
             this.Controls.Add(this.picCor2);
             this.Controls.Add(this.picCor5);
@@ -245,10 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCor5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -264,9 +209,6 @@
         private System.Windows.Forms.PictureBox picCor5;
         private System.Windows.Forms.PictureBox picCor2;
         private System.Windows.Forms.PictureBox picCor4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblErradas;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblCertas;
+        private EllieLogicShared.Placar placar1;
     }
 }

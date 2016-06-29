@@ -8,11 +8,10 @@ namespace EllieLogicShared
 {
     public interface IGame
     {
-        void inicializar();
-        void exibirdesign();
-        void fazerJogada();
-        void validarJogada();
-        void calcularResultado();
+        void inicializar();        
+        void fazerJogada(object valor1, object valor2);
+        Placar.RESULTADO_JOGADA validarJogada(object valor1, object valor2);
+        void calcularResultadoFinal();
         void encerrar();
         
     }

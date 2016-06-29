@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ellie", "ellie\Ellie.csproj", "{01CA1DCE-47CC-424C-8DA3-F86562011C04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllieLogicShared", "ClassLibrary1\EllieLogicShared.csproj", "{47BB0912-32BC-4F26-A1E5-A741D199C59D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllieLogicShared", "EllieLogicShared\EllieLogicShared.csproj", "{47BB0912-32BC-4F26-A1E5-A741D199C59D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
