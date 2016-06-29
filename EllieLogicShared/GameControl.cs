@@ -12,6 +12,10 @@ namespace EllieLogicShared
         String nome_jogo;
         Int32 erros, acertos;
         Boolean _sound;
+        Placar _placar;
+        int _jogadas;
+        int _jogadas_permitidas;
+        public EventHandler clickJogada;
 
         public GameControl()
         {
@@ -24,55 +28,99 @@ namespace EllieLogicShared
             this.erros = 0;
             this.acertos = 0;
             this._sound = true;
+            this._jogadas = 0;
+            this._jogadas_permitidas = 5;
+            
+        }
+        /// <summary>
+        /// Inicializa a jogada, configurando o componente de placar do jogo
+        /// </summary>
+        /// <param name="placar"></param>
+        public void inicializar(Placar placar)
+        {
+            this.nome_jogo = "";
+            this.erros = 0;
+            this.acertos = 0;
+            this._sound = true;
+            this._placar = placar != null ? placar:new Placar();
+            this._jogadas_permitidas = 5;
+         
         }
 
+        public void configurarPlacar(Placar placar)
+        {
+            this._placar = placar != null ? placar : new Placar();
+        }
 
         public void encerrar()
         {
-            throw new NotImplementedException();
+
+            // TODO: Tocar som de encerramento
+
+
+            calcularResultadoFinal();
+
+            // TODO: Salvar no banco de dados
         }
 
-        public void exibirdesign()
+        public void fazerJogada(object valor1, object valor2)
         {
-            throw new NotImplementedException();
-        }
 
-        public void fazerJogada()
-        {
-            throw new NotImplementedException();
-        }
-
-        
-
-        public void validarJogada()
-        {
-            if (true)
+            if (_jogadas < this._jogadas_permitidas)
             {
-                if (_sound)
-                {
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(EllieLogicShared.Properties.Resources.som_erro);
-                    player.Play();
-                    Thread.Sleep(2000);
-                }
+                this.validarJogada(valor1,valor2);
+                this._jogadas++;
             }
-            else {
+            
+        }
+
+        public Placar.RESULTADO_JOGADA validarJogada(object valor1, object valor2)
+        {
+
+            if (valor1 == valor2)
+            {
                 if (_sound)
                 {
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer(EllieLogicShared.Properties.Resources.som_acerto);
                     player.Play();
                     Thread.Sleep(2000);
                 }
+
+                _placar.atualizarPlacar(Placar.RESULTADO_JOGADA.ACERTO);
+                return Placar.RESULTADO_JOGADA.ACERTO;
             }
+            else
+            {
+                if (_sound)
+                {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(EllieLogicShared.Properties.Resources.som_erro);
+                    player.Play();
+                    Thread.Sleep(2000);                  
+                }
+
+                _placar.atualizarPlacar(Placar.RESULTADO_JOGADA.ERRO);
+                return Placar.RESULTADO_JOGADA.ERRO;
+            }           
+            
         }
 
-        public void calcularResultado()
+        public void calcularResultadoFinal()
         {
-            throw new NotImplementedException();
+            //
         }
 
-        public void exibirPlacar()
+        public int obterQuantidadeJogadasRealizadas()
         {
-
+            return this._jogadas;
         }
+
+
+        public int obterQuantidadeJogadasRestantes()
+        {
+            return this._jogadas_permitidas- this._jogadas;
+        }
+
+
+
     }
 }

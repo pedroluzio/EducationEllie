@@ -7,3 +7,4 @@ C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLog
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.dll
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.pdb
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.Placar.resources
+C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.csprojResolveAssemblyReference.cache
