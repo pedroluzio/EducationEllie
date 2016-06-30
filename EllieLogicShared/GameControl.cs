@@ -11,7 +11,13 @@ namespace EllieLogicShared
     {
         String nome_jogo;
         Int32 erros, acertos;
+
         Boolean _sound;
+        public Boolean EfeitoSonoroHabilitado {
+        get { return this._sound; }
+            set { this._sound = value; }
+        }
+
         Placar _placar;
         int _jogadas;
         int _jogadas_permitidas;
