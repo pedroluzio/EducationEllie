@@ -96,7 +96,7 @@
             this.lblTotalJogadas.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalJogadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalJogadas.ForeColor = System.Drawing.Color.White;
-            this.lblTotalJogadas.Location = new System.Drawing.Point(33, 102);
+            this.lblTotalJogadas.Location = new System.Drawing.Point(26, 103);
             this.lblTotalJogadas.Name = "lblTotalJogadas";
             this.lblTotalJogadas.Size = new System.Drawing.Size(219, 31);
             this.lblTotalJogadas.TabIndex = 44;
@@ -115,6 +115,7 @@
             this.Controls.Add(this.lblCertas);
             this.Name = "Placar";
             this.Size = new System.Drawing.Size(272, 179);
+            this.Load += new System.EventHandler(this.Placar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
