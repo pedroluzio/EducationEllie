@@ -38,7 +38,15 @@ namespace EllieLogicShared
 
             lblCertas.Text = _acertos.ToString();
             lblErradas.Text = _erros.ToString();
-            lblTotalJogadas.Text = _jogadas.ToString();
+
+            if (_jogadas > 1)
+            {
+                lblTotalJogadas.Text = _jogadas.ToString() + " jogadas";
+            }
+            else {
+                lblTotalJogadas.Text = _jogadas.ToString() + " jogada";
+            }
+           
         }
 
         public enum RESULTADO_JOGADA
@@ -46,5 +54,14 @@ namespace EllieLogicShared
             ACERTO,
             ERRO
         }
+
+        private void Placar_Load(object sender, EventArgs e)
+        {
+            System.Drawing.Text.PrivateFontCollection privateFonts = new System.Drawing.Text.PrivateFontCollection();
+            privateFonts.AddFontFile("Crayon.ttf");
+
+            lblTotalJogadas.Font = new Font(privateFonts.Families[0], 20);
+        }
+             
     }
 }
