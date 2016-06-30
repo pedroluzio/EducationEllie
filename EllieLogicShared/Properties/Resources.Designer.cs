@@ -61,6 +61,16 @@ namespace EllieLogicShared.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DK_Crayon_Crumble {
+            get {
+                object obj = ResourceManager.GetObject("DK_Crayon_Crumble", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Encontre as cores.
         /// </summary>
         internal static string GameName {
