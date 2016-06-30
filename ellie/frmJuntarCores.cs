@@ -15,16 +15,10 @@ namespace Ellie
     public partial class frmJuntarCores : Form
     {
         // Define o controlador do jogo
-        EllieLogicShared.GameControl game_juntarcores;
-
-        // Define se as notificações de áudio serão emitidas
-        Boolean _sound;
+        EllieLogicShared.GameControl game_juntarcores;       
 
         // Lista de imagens das cores
-        private PictureBox[] pics;
-
-        // Lista da ultima jogada, contendo sequencia de cores sorteadas
-        private int[] jogada_recente;
+        private PictureBox[] pics;        
 
         // Lista de cores disponíveis no jogo
         List<Bitmap> cores;        
@@ -43,17 +37,29 @@ namespace Ellie
 
             pics = new PictureBox[] { picCor1, picCor2, picCor3, picCor4, picCor5, picCor6, picCor7, picCor8 };
 
-            this._sound = sound;         
+            for (int i = 0; i < pics.Length; i++)
+            {
+                pics[i].Click += new EventHandler(pic_Click);
+            }
+
+            this.game_juntarcores = new GameControl();
+
+
+            this.game_juntarcores.EfeitoSonoroHabilitado = sound;         
+
+        }
+
+        private void carregarCores()
+        {
+            cores = new List<Bitmap> { Properties.Resources.corAmarelo, Properties.Resources.corBranco, Properties.Resources.corAzul, Properties.Resources.corVerde, Properties.Resources.corVermelho, Properties.Resources.corLaranja, Properties.Resources.corRosa, };
 
         }
 
         private void frmParesCores_Load(object sender, EventArgs e)
         {
-            this.game_juntarcores = new GameControl();
+            
 
-            game_juntarcores.inicializar(placar1);            
-
-            cores = new List<Bitmap> { Properties.Resources.corAmarelo, Properties.Resources.corBranco, Properties.Resources.corAzul, Properties.Resources.corVerde, Properties.Resources.corVermelho, Properties.Resources.corLaranja, Properties.Resources.corRosa, };
+            game_juntarcores.inicializar(placar1);         
 
             geraCor(cor);         
 
@@ -73,32 +79,30 @@ namespace Ellie
         /// <param name="corAtual">0-Amarelo 1-Branco 2-Azul 3-Verde 4-Vermelho 5-Laranja 6-Rosa</param>
         private void geraCor(int corAtual)
         {
+            carregarCores();
+
             Random rdn = new Random();
 
             // Escolhe a cor par da jogada
             do
                 CorPar = cor = rdn.Next(0, cores.Count);
             while (CorPar == corAtual);
-
            
 
-            // Escolhe duas posições para a cor
-
-            int posicao_cor_par1 = rdn.Next(0, 8);
-            
+            // Escolhe duas posições para a cor par
+            int posicao_cor_par1 = rdn.Next(0, 8);            
             int posicao_cor_par2 = 0;
 
-            // Gera posição diferente para a cor par
+            // Gera posição diferente para a cor par 2
             do
-                posicao_cor_par2 = rdn.Next(0, 8); // Gera uma cor aleatória
+                posicao_cor_par2 = rdn.Next(0, 8); 
             while (posicao_cor_par2 == posicao_cor_par1);
 
             // Define as imagens dos PIctureBox nas posições sorteadas
 
             pics[posicao_cor_par1].Image = cores[CorPar];
-            pics[posicao_cor_par1].Click += new EventHandler(pic_Click);
             pics[posicao_cor_par2].Image = cores[CorPar];
-            pics[posicao_cor_par2].Click += new EventHandler(pic_Click);
+           
 
             cores.RemoveAt(CorPar);
 
@@ -106,6 +110,8 @@ namespace Ellie
             // Percorre a lista de imagens 
             for (int i = 0; i < pics.Length; i++)
             {
+                pics[i].BorderStyle = BorderStyle.None;
+
                 int cor_sorteada = -1;
 
                 do
@@ -115,18 +121,14 @@ namespace Ellie
                 // Configura cor na posição
 
                 if (i != posicao_cor_par1 && posicao_cor_par2 != i)
+                {
                     if (cores.Count > 0)
                     {
-                        pics[i].Image = cores[cor_sorteada];
-                        pics[i].Click += new EventHandler(pic_Click);
-                        cores.RemoveAt(cor_sorteada);
+                        pics[i].Image = cores[cor_sorteada];  
+                        cores.RemoveAt(cor_sorteada); // Remove da lista de cores disponíveis a cor que foi usada agora
                     }
-            }
-
-            /*            
-            foreach (PictureBox picAll in pics)
-                picAll.BorderStyle = BorderStyle.None;
-            */
+                }
+            }            
         }
        
 
@@ -136,7 +138,15 @@ namespace Ellie
         {
             PictureBox pic = sender as PictureBox;
 
+            
+
+            /*System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, pic.Width - 3, pic.Height - 3);
+            Region rg = new Region(gp);
+            pic.Region = rg;*/
+
             pic.BorderStyle = BorderStyle.Fixed3D;
+           // pic.BackColor = Color.Red;
 
             // Verifica se é a primeira jogada
             if (corTentativa == null)
@@ -151,7 +161,7 @@ namespace Ellie
 
                 corTentativa = null;
 
-                geraCor(0);
+                geraCor(CorPar);
             }            
         }
 

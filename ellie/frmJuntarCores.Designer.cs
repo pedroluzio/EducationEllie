@@ -31,7 +31,6 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.picCor1 = new System.Windows.Forms.PictureBox();
-            this.picCor7 = new System.Windows.Forms.PictureBox();
             this.picCor8 = new System.Windows.Forms.PictureBox();
             this.picCor6 = new System.Windows.Forms.PictureBox();
             this.picCor3 = new System.Windows.Forms.PictureBox();
@@ -39,14 +38,15 @@
             this.picCor2 = new System.Windows.Forms.PictureBox();
             this.picCor4 = new System.Windows.Forms.PictureBox();
             this.placar1 = new EllieLogicShared.Placar();
+            this.picCor7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picCor1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCor7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCor7)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSair
@@ -83,25 +83,16 @@
             // picCor1
             // 
             this.picCor1.BackColor = System.Drawing.Color.Transparent;
-            this.picCor1.Location = new System.Drawing.Point(153, 162);
+            this.picCor1.Location = new System.Drawing.Point(249, 162);
             this.picCor1.Name = "picCor1";
             this.picCor1.Size = new System.Drawing.Size(80, 80);
             this.picCor1.TabIndex = 28;
             this.picCor1.TabStop = false;
             // 
-            // picCor7
-            // 
-            this.picCor7.BackColor = System.Drawing.Color.Transparent;
-            this.picCor7.Location = new System.Drawing.Point(356, 410);
-            this.picCor7.Name = "picCor7";
-            this.picCor7.Size = new System.Drawing.Size(80, 80);
-            this.picCor7.TabIndex = 29;
-            this.picCor7.TabStop = false;
-            // 
             // picCor8
             // 
             this.picCor8.BackColor = System.Drawing.Color.Transparent;
-            this.picCor8.Location = new System.Drawing.Point(626, 410);
+            this.picCor8.Location = new System.Drawing.Point(479, 338);
             this.picCor8.Name = "picCor8";
             this.picCor8.Size = new System.Drawing.Size(80, 80);
             this.picCor8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,7 +102,7 @@
             // picCor6
             // 
             this.picCor6.BackColor = System.Drawing.Color.Transparent;
-            this.picCor6.Location = new System.Drawing.Point(745, 284);
+            this.picCor6.Location = new System.Drawing.Point(698, 338);
             this.picCor6.Name = "picCor6";
             this.picCor6.Size = new System.Drawing.Size(80, 80);
             this.picCor6.TabIndex = 31;
@@ -120,7 +111,7 @@
             // picCor3
             // 
             this.picCor3.BackColor = System.Drawing.Color.Transparent;
-            this.picCor3.Location = new System.Drawing.Point(626, 162);
+            this.picCor3.Location = new System.Drawing.Point(698, 162);
             this.picCor3.Name = "picCor3";
             this.picCor3.Size = new System.Drawing.Size(80, 80);
             this.picCor3.TabIndex = 32;
@@ -129,7 +120,7 @@
             // picCor5
             // 
             this.picCor5.BackColor = System.Drawing.Color.Transparent;
-            this.picCor5.Location = new System.Drawing.Point(492, 284);
+            this.picCor5.Location = new System.Drawing.Point(590, 249);
             this.picCor5.Name = "picCor5";
             this.picCor5.Size = new System.Drawing.Size(80, 80);
             this.picCor5.TabIndex = 33;
@@ -138,7 +129,7 @@
             // picCor2
             // 
             this.picCor2.BackColor = System.Drawing.Color.Transparent;
-            this.picCor2.Location = new System.Drawing.Point(356, 162);
+            this.picCor2.Location = new System.Drawing.Point(479, 162);
             this.picCor2.Name = "picCor2";
             this.picCor2.Size = new System.Drawing.Size(80, 80);
             this.picCor2.TabIndex = 34;
@@ -147,7 +138,7 @@
             // picCor4
             // 
             this.picCor4.BackColor = System.Drawing.Color.Transparent;
-            this.picCor4.Location = new System.Drawing.Point(249, 284);
+            this.picCor4.Location = new System.Drawing.Point(366, 249);
             this.picCor4.Name = "picCor4";
             this.picCor4.Size = new System.Drawing.Size(80, 80);
             this.picCor4.TabIndex = 35;
@@ -156,10 +147,19 @@
             // placar1
             // 
             this.placar1.BackColor = System.Drawing.Color.Transparent;
-            this.placar1.Location = new System.Drawing.Point(53, 320);
+            this.placar1.Location = new System.Drawing.Point(35, 325);
             this.placar1.Name = "placar1";
-            this.placar1.Size = new System.Drawing.Size(150, 150);
+            this.placar1.Size = new System.Drawing.Size(276, 198);
             this.placar1.TabIndex = 36;
+            // 
+            // picCor7
+            // 
+            this.picCor7.BackColor = System.Drawing.Color.Transparent;
+            this.picCor7.Location = new System.Drawing.Point(249, 338);
+            this.picCor7.Name = "picCor7";
+            this.picCor7.Size = new System.Drawing.Size(80, 80);
+            this.picCor7.TabIndex = 37;
+            this.picCor7.TabStop = false;
             // 
             // frmJuntarCores
             // 
@@ -168,6 +168,7 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.picCor7);
             this.Controls.Add(this.placar1);
             this.Controls.Add(this.picCor4);
             this.Controls.Add(this.picCor2);
@@ -175,7 +176,6 @@
             this.Controls.Add(this.picCor3);
             this.Controls.Add(this.picCor6);
             this.Controls.Add(this.picCor8);
-            this.Controls.Add(this.picCor7);
             this.Controls.Add(this.picCor1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSair);
@@ -186,13 +186,13 @@
             this.Text = "frmParesCores";
             this.Load += new System.EventHandler(this.frmParesCores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCor1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCor7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCor7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,7 +202,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picCor1;
-        private System.Windows.Forms.PictureBox picCor7;
         private System.Windows.Forms.PictureBox picCor8;
         private System.Windows.Forms.PictureBox picCor6;
         private System.Windows.Forms.PictureBox picCor3;
@@ -210,5 +209,6 @@
         private System.Windows.Forms.PictureBox picCor2;
         private System.Windows.Forms.PictureBox picCor4;
         private EllieLogicShared.Placar placar1;
+        private System.Windows.Forms.PictureBox picCor7;
     }
 }
