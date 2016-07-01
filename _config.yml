@@ -3,7 +3,7 @@ description: Software Educacional
 author: Education Ellie
 logo: /EducationEllie/static/img/logo.png
 github: https://github.com/pedroluzio/EducationEllie
-about: Softwares Educativo
+about: Software Educativo
 disqus_shortname: aboutashu
 #google_analytics: UA-72862926-1
 urls:
@@ -14,7 +14,7 @@ urls:
     - text: Sobre
       url: /about/
       icon: fa-comments
-    - text: Projects
+    - text: Jogos
       url: /projects/
       icon: fa-desktop
     - text: Resume
