@@ -8,6 +8,12 @@ permalink: /about/
 
 ! [Board] (https://sourceforge.net/p/educationellie/screenshot/Board.png)
 
+![Board](https://sourceforge.net/p/educationellie/screenshot/Board.png){:class="img-responsive"}
+
+![Board]({{ site.url }}/static/img/board.jpg)
+
+![Board](EducationEllie/static/img/board.jpg)
+
 ### O que é?
 Os alunos com dificuldades de aprendizagem ou deficiências mentais têm métodos, níveis de conhecimento e de ensino semelhantes aos alunos no primeiro ciclo do ensino básico. 
 Este software destina-se a ajudar a aprendizagem destes alunos e alunos da primário.
