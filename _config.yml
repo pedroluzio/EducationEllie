@@ -3,15 +3,15 @@ description: Software Educacional
 author: Education Ellie
 logo: /EducationEllie/static/img/logo.png
 github: https://github.com/pedroluzio/EducationEllie
-about: Software Educativo
+about: Softwares Educativo
 disqus_shortname: aboutashu
 #google_analytics: UA-72862926-1
 urls:
-    - text: Home
+    - text: Início
       url: /
       icon: fa-home
       layout: post
-    - text: About
+    - text: Sobre
       url: /about/
       icon: fa-comments
     - text: Projects
@@ -48,7 +48,7 @@ enableTags: true
 tagarray: []
 
 url: "http://aboutashu.com/hcz-jekyll-blog"
-baseurl: "/hcz-jekyll-blog"
+baseurl: "/EducationEllie"
 paginate: 20
 per_page: 20
 paginate_path: "/page:num/"
