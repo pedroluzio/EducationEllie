@@ -18,3 +18,21 @@ Having trouble with software? Contact pedro.luzio.cloud@gmail.com and we’ll he
 
 ***
 2016-06-13
+***
+
+# Jogos prontos
+
+## Junta as cores pares
+
+**Objetivo**
+
+**Metodologia**
+![Board](https://drive.google.com/uc?export=view&id=0BwdCDaMXmdGPdmVUS25aMENIWkE)
+
+#### Quantos objetos você vê?
+
+**Objetivo**
+
+**Metodologia**
+
+![Board](https://sourceforge.net/p/educationellie/screenshot/Board.png)

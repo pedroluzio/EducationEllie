@@ -8,118 +8,170 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EllieLogicShared;
 
 namespace Ellie
 {
     public partial class frmJuntarCores : Form
     {
-        Boolean _sound;
+        // Define o controlador do jogo
+        EllieLogicShared.GameControl game_juntarcores;       
+
+        // Lista de imagens das cores
+        private PictureBox[] pics;        
+
+        // Lista de cores disponíveis no jogo
+        List<Bitmap> cores;        
+
+        // Cores que serão pares
+        int CorPar;
+
+        int cor;//0-Amarelo 1-Branco 2-Azul 3-Verde 4-Vermelho 5-Laranja 6-Rosa
+
+        Image corTentativa;
+
+
         public frmJuntarCores(Boolean sound)
         {
             InitializeComponent();
+
             pics = new PictureBox[] { picCor1, picCor2, picCor3, picCor4, picCor5, picCor6, picCor7, picCor8 };
-            this._sound = sound;
+
+            for (int i = 0; i < pics.Length; i++)
+            {
+                pics[i].Click += new EventHandler(pic_Click);
+            }
+
+            this.game_juntarcores = new GameControl();
+
+
+            this.game_juntarcores.EfeitoSonoroHabilitado = sound;         
+
         }
-        private PictureBox[] pics;
+
+        private void carregarCores()
+        {
+            cores = new List<Bitmap> { Properties.Resources.corAmarelo, Properties.Resources.corBranco, Properties.Resources.corAzul, Properties.Resources.corVerde, Properties.Resources.corVermelho, Properties.Resources.corLaranja, Properties.Resources.corRosa, };
+
+        }
+
+        private void frmParesCores_Load(object sender, EventArgs e)
+        {
+            
+
+            game_juntarcores.inicializar(placar);         
+
+            geraCor(cor);         
+
+            
+        }
+
+
         public ICollection<PictureBox> Pics
         {
             get { return Pics; }
         }
-        
-        Bitmap[] cores;
-        int cor;//0-Amarelo 1-Branco 2-Azul 3-Verde 4-Vermelho 5-Laranja 6-Rosa
-        int jogada;
-        Image corTentativa;
 
+
+        /// <summary>
+        /// Gera cores aleatórias e define nos componentes gráficos
+        /// </summary>
+        /// <param name="corAtual">0-Amarelo 1-Branco 2-Azul 3-Verde 4-Vermelho 5-Laranja 6-Rosa</param>
         private void geraCor(int corAtual)
         {
+            carregarCores();
+
             Random rdn = new Random();
+
+            // Escolhe a cor par da jogada
             do
-                cor = rdn.Next(0, 6);
-            while (cor == corAtual);
-            foreach (PictureBox pic in pics)
-                pic.Image = null;
+                CorPar = cor = rdn.Next(0, cores.Count);
+            while (CorPar == corAtual);
+           
 
-            int picParaNovaCor; ;
-            for (int i = 0; i < cores.Length; i++)
+            // Escolhe duas posições para a cor par
+            int posicao_cor_par1 = rdn.Next(0, 8);            
+            int posicao_cor_par2 = 0;
+
+            // Gera posição diferente para a cor par 2
+            do
+                posicao_cor_par2 = rdn.Next(0, 8); 
+            while (posicao_cor_par2 == posicao_cor_par1);
+
+            // Define as imagens dos PIctureBox nas posições sorteadas
+
+            pics[posicao_cor_par1].Image = cores[CorPar];
+            pics[posicao_cor_par2].Image = cores[CorPar];
+           
+
+            cores.RemoveAt(CorPar);
+
+
+            // Percorre a lista de imagens 
+            for (int i = 0; i < pics.Length; i++)
             {
+                pics[i].BorderStyle = BorderStyle.None;
+
+                int cor_sorteada = -1;
+
                 do
-                    picParaNovaCor = rdn.Next(0, pics.Length - 1);
-                while (pics[picParaNovaCor].Image != null);
-                pics[picParaNovaCor].Image = cores[i];
-            }
-            foreach (PictureBox pic in pics)
-                pic.Image = pic.Image == null ? cores[cor] : pic.Image;
-            foreach (PictureBox picAll in pics)
-                picAll.BorderStyle = BorderStyle.None;
+                    cor_sorteada = rdn.Next(0, cores.Count);
+                while (cor_sorteada == CorPar);
 
-            jogada = 1;
-        }
+                // Configura cor na posição
 
-        private void certo()
-        {
-            if (_sound)
-            {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.certo);
-                player.Play();
-                Thread.Sleep(2000);
-            }
-            lblCertas.Tag = Convert.ToInt32(lblCertas.Tag) + 1;
-            lblCertas.Text = lblCertas.Tag.ToString();
-            jogada = 1;
-            geraCor(cor);
+                if (i != posicao_cor_par1 && posicao_cor_par2 != i)
+                {
+                    if (cores.Count > 0)
+                    {
+                        pics[i].Image = cores[cor_sorteada];  
+                        cores.RemoveAt(cor_sorteada); // Remove da lista de cores disponíveis a cor que foi usada agora
+                    }
+                }
+            }            
         }
+       
 
-        private void errado()
-        {
-            if (_sound)
-            {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.errado);
-                player.Play();
-                Thread.Sleep(2000);
-            }
-            lblErradas.Tag = Convert.ToInt32(lblErradas.Tag) + 1;
-            lblErradas.Text = lblErradas.Tag.ToString();
-            jogada = 1;
-        }
+
 
         private void pic_Click(object sender, EventArgs e)
         {
             PictureBox pic = sender as PictureBox;
+
+            
+
+            /*System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, pic.Width - 3, pic.Height - 3);
+            Region rg = new Region(gp);
+            pic.Region = rg;*/
+
             pic.BorderStyle = BorderStyle.Fixed3D;
-            if (jogada == 1)
+           // pic.BackColor = Color.Red;
+
+            // Verifica se é a primeira jogada
+            if (corTentativa == null)
             {
-                corTentativa = pic.Image;
-                jogada++;
+                corTentativa = pic.Image;                
+                pic.BorderStyle = BorderStyle.FixedSingle;
             }
             else
             {
-                if (corTentativa == pic.Image)
-                    certo();
-                else
-                {
-                    foreach (PictureBox picAll in pics)
-                        picAll.BorderStyle = BorderStyle.None;
-                    errado();
-                }
-            }
+                game_juntarcores.fazerJogada(corTentativa, pic.Image);
+                pic.BorderStyle = BorderStyle.FixedSingle;
 
-            
+                corTentativa = null;
+
+                geraCor(CorPar);
+            }            
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Queres mesmo sair?", "Sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                game_juntarcores.encerrar();
                 this.Close();
-        }
-
-        private void frmParesCores_Load(object sender, EventArgs e)
-        {
-            cores = new Bitmap[] { Properties.Resources.corAmarelo, Properties.Resources.corBranco, Properties.Resources.corAzul, Properties.Resources.corVerde, Properties.Resources.corVermelho, Properties.Resources.corLaranja, Properties.Resources.corRosa, };
-            foreach (PictureBox pic in pics)
-                pic.Click += new EventHandler(pic_Click);
-
-            geraCor(cor);
+            }
         }
     }
 }

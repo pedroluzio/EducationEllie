@@ -46,6 +46,7 @@
             this.lbl_errado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
+            this.ellieAjuda1 = new EllieLogicShared.EllieAjuda();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -341,13 +342,23 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // contar
+            // ellieAjuda1
+            // 
+            this.ellieAjuda1.BackColor = System.Drawing.Color.Transparent;
+            this.ellieAjuda1.Location = new System.Drawing.Point(35, 40);
+            this.ellieAjuda1.Name = "ellieAjuda1";
+            this.ellieAjuda1.Size = new System.Drawing.Size(146, 129);
+            this.ellieAjuda1.TabIndex = 39;
+            this.ellieAjuda1.Click += new System.EventHandler(this.ellieAjuda1_Click);
+            // 
+            // frmContar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.ellieAjuda1);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -361,7 +372,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "contar";
+            this.Name = "frmContar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.MaximumSizeChanged += new System.EventHandler(this.contar_MaximumSizeChanged);
@@ -392,6 +403,7 @@
         private System.Windows.Forms.Label lbl_errado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button11;
+        private EllieLogicShared.EllieAjuda ellieAjuda1;
     }
 }
 

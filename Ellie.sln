@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ellie", "ellie\Ellie.csproj", "{01CA1DCE-47CC-424C-8DA3-F86562011C04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllieLogicShared", "EllieLogicShared\EllieLogicShared.csproj", "{47BB0912-32BC-4F26-A1E5-A741D199C59D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{01CA1DCE-47CC-424C-8DA3-F86562011C04}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01CA1DCE-47CC-424C-8DA3-F86562011C04}.Release|x64.ActiveCfg = Release|Any CPU
 		{01CA1DCE-47CC-424C-8DA3-F86562011C04}.Release|x64.Build.0 = Release|Any CPU
+		{47BB0912-32BC-4F26-A1E5-A741D199C59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47BB0912-32BC-4F26-A1E5-A741D199C59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47BB0912-32BC-4F26-A1E5-A741D199C59D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{47BB0912-32BC-4F26-A1E5-A741D199C59D}.Debug|x64.Build.0 = Debug|Any CPU
+		{47BB0912-32BC-4F26-A1E5-A741D199C59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47BB0912-32BC-4F26-A1E5-A741D199C59D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47BB0912-32BC-4F26-A1E5-A741D199C59D}.Release|x64.ActiveCfg = Release|Any CPU
+		{47BB0912-32BC-4F26-A1E5-A741D199C59D}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
