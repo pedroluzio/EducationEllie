@@ -1,11 +1,11 @@
 title: Education Ellie
 description: Software Educacional
 author: Education Ellie
-logo: http://aboutashu.com/hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/ashutosh2k12
-about: Freelance developer
+logo: /static/img/logo.png
+github: https://github.com/pedroluzio/EducationEllie
+about: Software Educativo
 disqus_shortname: aboutashu
-google_analytics: UA-72862926-1
+#google_analytics: UA-72862926-1
 urls:
     - text: Home
       url: /
@@ -21,7 +21,7 @@ urls:
       url: '#'
       icon: fa-graduation-cap
     - text: Github
-      url: https://github.com/ashutosh2k12
+      url: https://github.com/pedroluzio/EducationEllie
       icon: fa-github
     - text: XML Feed
       url: /feed.xml
