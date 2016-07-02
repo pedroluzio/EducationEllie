@@ -6,13 +6,7 @@ permalink: /about/
 
 # Education Ellie
 
-! [Board] (https://sourceforge.net/p/educationellie/screenshot/Board.png)
-
 ![Board](https://sourceforge.net/p/educationellie/screenshot/Board.png){:class="img-responsive"}
-
-![Board]({{ site.url }}/static/img/board.jpg)
-
-![Board](EducationEllie/static/img/board.jpg)
 
 ### O que é?
 Os alunos com dificuldades de aprendizagem ou deficiências mentais têm métodos, níveis de conhecimento e de ensino semelhantes aos alunos no primeiro ciclo do ensino básico. 
@@ -26,8 +20,7 @@ Originalmente, o software foi desenvolvido por Pedro Luzio @pedroluzio, estudant
 em conjunto com Janynne Gomes @devnetgomez, professora universitária de programação no Brasil
 
 ### Suporte ou Contato
-Tem problemas com software? Contate education.ellie.project@gmail.com e nós vamos ajudá-lo a resolver o problema.
+Tem problemas com software? Contate [education.ellie.project@gmail.com](education.ellie.project@gmail.com) e nós vamos ajudá-lo a resolver o problema.
 
 ***
 2016/07/01
-***
