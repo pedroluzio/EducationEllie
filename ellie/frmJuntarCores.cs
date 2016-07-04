@@ -115,7 +115,17 @@ namespace Ellie
                 int cor_sorteada = -1;
 
                 do
-                    cor_sorteada = rdn.Next(0, cores.Count);
+                {
+                    if(cores.Count == 1)
+                    {
+                        cor_sorteada = 0;
+                    }
+                    else
+                    {
+                        cor_sorteada = rdn.Next(0, cores.Count);
+                    }
+                    
+                }
                 while (cor_sorteada == CorPar);
 
                 // Configura cor na posição
@@ -138,26 +148,23 @@ namespace Ellie
         {
             PictureBox pic = sender as PictureBox;
 
-            
+
 
             /*System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
             gp.AddEllipse(0, 0, pic.Width - 3, pic.Height - 3);
             Region rg = new Region(gp);
             pic.Region = rg;*/
 
-            pic.BorderStyle = BorderStyle.Fixed3D;
-           // pic.BackColor = Color.Red;
+            pic.BorderStyle = BorderStyle.FixedSingle;
 
             // Verifica se é a primeira jogada
             if (corTentativa == null)
             {
                 corTentativa = pic.Image;                
-                pic.BorderStyle = BorderStyle.FixedSingle;
             }
             else
             {
-                game_juntarcores.fazerJogada(corTentativa, pic.Image);
-                pic.BorderStyle = BorderStyle.FixedSingle;
+                game_juntarcores.fazerJogada(corTentativa, pic.Image);              
 
                 corTentativa = null;
 

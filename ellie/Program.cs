@@ -17,6 +17,9 @@ namespace Ellie
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMenu());
+
+            Persistencia persistenciaDados = new Persistencia();
+
         }
     }
 }

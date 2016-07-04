@@ -35,8 +35,8 @@ namespace EllieLogicShared
             this.acertos = 0;
             this._sound = true;
             this._jogadas = 0;
-            this._jogadas_permitidas = 5;
-            
+            this._jogadas_permitidas = 50;
+
         }
         /// <summary>
         /// Inicializa a jogada, configurando o componente de placar do jogo
@@ -49,7 +49,7 @@ namespace EllieLogicShared
             this.acertos = 0;
             this._sound = true;
             this._placar = placar != null ? placar:new Placar();
-            this._jogadas_permitidas = 5;
+            this._jogadas_permitidas = 50;
          
         }
 
