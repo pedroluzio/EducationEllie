@@ -103,7 +103,10 @@ namespace Ellie
 
         private void btnEnvia_Click(object sender, EventArgs e)
         {
-            //Guarda aqui o nome para inserção no SQLite.
+            Persistencia dados = new Persistencia();
+
+            Int32 idPayer = dados.SaveNewPlayer(lblNome.Text);
+
             this.Close();
         }
 

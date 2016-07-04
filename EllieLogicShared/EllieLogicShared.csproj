@@ -68,6 +68,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="Resources\DK Crayon Crumble.ttf" />
     <None Include="Resources\errado.bmp" />
   </ItemGroup>
