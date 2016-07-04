@@ -196,6 +196,8 @@ namespace Ellie
             if (MessageBox.Show("Queres mesmo sair?", "Sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 this.Close();
         }
+
+       
     }
     
 }
