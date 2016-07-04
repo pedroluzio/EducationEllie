@@ -37,9 +37,14 @@
             this.picCor5 = new System.Windows.Forms.PictureBox();
             this.picCor2 = new System.Windows.Forms.PictureBox();
             this.picCor4 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
+            this.placar1 = new EllieLogicShared.Placar();
+            this.picCor7 = new System.Windows.Forms.PictureBox();
+=======
             this.placar = new EllieLogicShared.Placar();
             this.picCor7 = new System.Windows.Forms.PictureBox();
             this.ellieAjuda = new EllieLogicShared.EllieAjuda();
+>>>>>>> refs/remotes/origin/master
             ((System.ComponentModel.ISupportInitialize)(this.picCor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor6)).BeginInit();
@@ -145,6 +150,24 @@
             this.picCor4.TabIndex = 35;
             this.picCor4.TabStop = false;
             // 
+<<<<<<< HEAD
+            // placar1
+            // 
+            this.placar1.BackColor = System.Drawing.Color.Transparent;
+            this.placar1.Location = new System.Drawing.Point(35, 325);
+            this.placar1.Name = "placar1";
+            this.placar1.Size = new System.Drawing.Size(276, 198);
+            this.placar1.TabIndex = 36;
+            // 
+            // picCor7
+            // 
+            this.picCor7.BackColor = System.Drawing.Color.Transparent;
+            this.picCor7.Location = new System.Drawing.Point(249, 338);
+            this.picCor7.Name = "picCor7";
+            this.picCor7.Size = new System.Drawing.Size(80, 80);
+            this.picCor7.TabIndex = 37;
+            this.picCor7.TabStop = false;
+=======
             // placar
             // 
             this.placar.BackColor = System.Drawing.Color.Transparent;
@@ -169,6 +192,7 @@
             this.ellieAjuda.Name = "ellieAjuda";
             this.ellieAjuda.Size = new System.Drawing.Size(146, 129);
             this.ellieAjuda.TabIndex = 38;
+>>>>>>> refs/remotes/origin/master
             // 
             // frmJuntarCores
             // 
@@ -177,9 +201,14 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+<<<<<<< HEAD
+            this.Controls.Add(this.picCor7);
+            this.Controls.Add(this.placar1);
+=======
             this.Controls.Add(this.ellieAjuda);
             this.Controls.Add(this.picCor7);
             this.Controls.Add(this.placar);
+>>>>>>> refs/remotes/origin/master
             this.Controls.Add(this.picCor4);
             this.Controls.Add(this.picCor2);
             this.Controls.Add(this.picCor5);
@@ -218,8 +247,13 @@
         private System.Windows.Forms.PictureBox picCor5;
         private System.Windows.Forms.PictureBox picCor2;
         private System.Windows.Forms.PictureBox picCor4;
+<<<<<<< HEAD
+        private EllieLogicShared.Placar placar1;
+        private System.Windows.Forms.PictureBox picCor7;
+=======
         private EllieLogicShared.Placar placar;
         private System.Windows.Forms.PictureBox picCor7;
         private EllieLogicShared.EllieAjuda ellieAjuda;
+>>>>>>> refs/remotes/origin/master
     }
 }

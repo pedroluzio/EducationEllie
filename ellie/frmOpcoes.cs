@@ -46,6 +46,12 @@ namespace Ellie
             tw.Write(sb);
             
             tw.Close();
+
+            // Salvar os dados no próprio 
+
+           // Properties.Settings.Default["juntar_cores_max_jogadas"] = nudQuantidadeJogadasJuntarCores.Value.ToString();
+           // Properties.Settings.Default.Save(); 
+
             this.Close();
         }
 

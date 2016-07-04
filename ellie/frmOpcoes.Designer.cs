@@ -34,9 +34,14 @@
             this.nud_contarSair = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.nudQuantidadeJogadasJuntarCores = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_contarMudar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_contarSair)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadeJogadasJuntarCores)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -103,18 +108,49 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // opcoes
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.nudQuantidadeJogadasJuntarCores);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(47, 222);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(483, 155);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Juntar Cores";
+            // 
+            // nudQuantidadeJogadasJuntarCores
+            // 
+            this.nudQuantidadeJogadasJuntarCores.Location = new System.Drawing.Point(387, 39);
+            this.nudQuantidadeJogadasJuntarCores.Name = "nudQuantidadeJogadasJuntarCores";
+            this.nudQuantidadeJogadasJuntarCores.Size = new System.Drawing.Size(56, 30);
+            this.nudQuantidadeJogadasJuntarCores.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(221, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Quantidade de jogadas:";
+            // 
+            // frmOpcoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "opcoes";
+            this.Name = "frmOpcoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opções";
             this.Load += new System.EventHandler(this.opcoes_Load);
@@ -122,6 +158,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_contarMudar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_contarSair)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantidadeJogadasJuntarCores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,5 +173,8 @@
         private System.Windows.Forms.NumericUpDown nud_contarMudar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.NumericUpDown nudQuantidadeJogadasJuntarCores;
+        private System.Windows.Forms.Label label4;
     }
 }
