@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sobre
-permalink: /contcat/
+permalink: /contact/
 ---
 
 Contacto
