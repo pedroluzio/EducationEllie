@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sobre
-permalink: /about/
+permalink: /as/
 ---
 
 # Education Ellie
