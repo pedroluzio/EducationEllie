@@ -1,41 +1,22 @@
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.exe.config
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.exe
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.pdb
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.Properties.Resources.resources
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.csproj.GenerateResource.Cache
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.exe
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.pdb
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\bin\Debug\Ellie.exe.config
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.exe
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.pdb
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\bin\Debug\Ellie.exe
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\bin\Debug\Ellie.pdb
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.csprojResolveAssemblyReference.cache
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmContar.resources
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmContas.resources
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmInfo.resources
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmMascote.resources
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmMenu.resources
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmOpcoes.resources
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.Properties.Resources.resources
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.frmNome.resources
-C:\Users\Utilizador\Desktop\Nova pasta\EducationEllie\ellie\obj\Debug\Ellie.csproj.GenerateResource.Cache
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.csprojResolveAssemblyReference.cache
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmContar.resources
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmContas.resources
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmInfo.resources
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmMascote.resources
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmMenu.resources
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmOpcoes.resources
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmNome.resources
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmJuntarCores.resources
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.exe.config
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.exe
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.pdb
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\x86\sqlite3.dll
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\x64\sqlite3.dll
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.exe
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Ellie.pdb
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EllieLogicShared.dll
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EntityFramework.dll
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\System.Data.SQLite.dll
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EllieLogicShared.pdb
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EntityFramework.xml
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\System.Data.SQLite.xml
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.csprojResolveAssemblyReference.cache
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmContar.resources
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmContas.resources
@@ -47,22 +28,5 @@ C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmJuntarCore
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.Properties.Resources.resources
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.frmNome.resources
 C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\x86\sqlite3.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\x64\sqlite3.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Microsoft.Data.Sqlite.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Microsoft.Data.Sqlite.xml
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EntityFramework.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\System.Data.SQLite.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EntityFramework.xml
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Janynne\Source\Repos\EducationEllie\ellie\bin\Debug\System.Data.SQLite.xml
-=======
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Debug\EllieLogicShared.dll
-C:\Users\Pedro\Source\Repos\EducationEllie\ellie\bin\Debug\EllieLogicShared.pdb
->>>>>>> refs/remotes/origin/master
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.exe
+C:\Users\Janynne\Source\Repos\EducationEllie\ellie\obj\Debug\Ellie.pdb

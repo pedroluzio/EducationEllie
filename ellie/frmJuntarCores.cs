@@ -59,12 +59,7 @@ namespace Ellie
         {
             
 
-<<<<<<< HEAD
             game_juntarcores.inicializar(placar1);         
-=======
-            game_juntarcores.inicializar(placar);         
->>>>>>> refs/remotes/origin/master
-
             geraCor(cor);         
 
             
@@ -119,7 +114,6 @@ namespace Ellie
                 int cor_sorteada = -1;
 
                 do
-<<<<<<< HEAD
                 {
                     if(cores.Count == 1)
                     {
@@ -131,9 +125,6 @@ namespace Ellie
                     }
                     
                 }
-=======
-                    cor_sorteada = rdn.Next(0, cores.Count);
->>>>>>> refs/remotes/origin/master
                 while (cor_sorteada == CorPar);
 
                 // Configura cor na posição
@@ -156,42 +147,17 @@ namespace Ellie
         {
             PictureBox pic = sender as PictureBox;
 
-<<<<<<< HEAD
-
-=======
-            
->>>>>>> refs/remotes/origin/master
-
-            /*System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            gp.AddEllipse(0, 0, pic.Width - 3, pic.Height - 3);
-            Region rg = new Region(gp);
-            pic.Region = rg;*/
-
-<<<<<<< HEAD
             pic.BorderStyle = BorderStyle.FixedSingle;
-=======
-            pic.BorderStyle = BorderStyle.Fixed3D;
-           // pic.BackColor = Color.Red;
->>>>>>> refs/remotes/origin/master
 
             // Verifica se é a primeira jogada
             if (corTentativa == null)
             {
                 corTentativa = pic.Image;                
-<<<<<<< HEAD
             }
             else
             {
                 game_juntarcores.fazerJogada(corTentativa, pic.Image);              
-=======
-                pic.BorderStyle = BorderStyle.FixedSingle;
-            }
-            else
-            {
-                game_juntarcores.fazerJogada(corTentativa, pic.Image);
-                pic.BorderStyle = BorderStyle.FixedSingle;
->>>>>>> refs/remotes/origin/master
-
+          
                 corTentativa = null;
 
                 geraCor(CorPar);
