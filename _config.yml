@@ -27,7 +27,7 @@ urls:
       url: /feed.xml
       icon: fa-feed
     - text: Contacto
-      url: /contact
+      url: /contact/
       icon: fa-envelope
       
 social:
