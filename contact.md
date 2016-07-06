@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Sobre
+title: Contacto
 permalink: /contact/
 ---
 
-# Suporte ou Contato
+# Suporte ou Contacto
 
  - Tem dúvidas sobre o Software?
  - Tem ideias para o Software?
