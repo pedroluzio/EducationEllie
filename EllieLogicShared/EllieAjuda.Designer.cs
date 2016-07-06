@@ -37,7 +37,7 @@
             // picHelp
             // 
             this.picHelp.BackColor = System.Drawing.Color.Transparent;
-            this.picHelp.Image = global::EllieLogicShared.Properties.Resources.img_certo;
+            this.picHelp.Image = global::EllieLogicShared.Properties.Resources.help_icon;
             this.picHelp.Location = new System.Drawing.Point(102, -2);
             this.picHelp.Name = "picHelp";
             this.picHelp.Size = new System.Drawing.Size(40, 50);
@@ -48,7 +48,7 @@
             // picEllie
             // 
             this.picEllie.BackColor = System.Drawing.Color.Transparent;
-            this.picEllie.Image = global::EllieLogicShared.Properties.Resources.img_certo;
+            this.picEllie.Image = global::EllieLogicShared.Properties.Resources.mascote;
             this.picEllie.Location = new System.Drawing.Point(0, 0);
             this.picEllie.Name = "picEllie";
             this.picEllie.Size = new System.Drawing.Size(124, 126);

@@ -93,8 +93,10 @@
     <None Include="Resources\Icon1.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\help_icon.png" />
     <Content Include="Resources\img_certo.png" />
     <Content Include="Resources\img_errado.png" />
+    <None Include="Resources\mascote.gif" />
     <None Include="Resources\placar_acertos.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

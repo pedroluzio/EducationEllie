@@ -82,6 +82,16 @@ namespace EllieLogicShared.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap help_icon {
+            get {
+                object obj = ResourceManager.GetObject("help_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_certo {
             get {
                 object obj = ResourceManager.GetObject("img_certo", resourceCulture);
@@ -95,6 +105,16 @@ namespace EllieLogicShared.Properties {
         internal static System.Drawing.Bitmap img_errado {
             get {
                 object obj = ResourceManager.GetObject("img_errado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mascote {
+            get {
+                object obj = ResourceManager.GetObject("mascote", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

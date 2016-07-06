@@ -121,19 +121,25 @@
   <data name="DK_Crayon_Crumble" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DK Crayon Crumble.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="GameName" xml:space="preserve">
-    <value>Encontre as cores</value>
-  </data>
-  <data name="img_certo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_certo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="som_acerto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\applause4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="img_errado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_errado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="som_acerto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\applause4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="img_certo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\img_certo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameName" xml:space="preserve">
+    <value>Encontre as cores</value>
   </data>
   <data name="som_erro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wrong-answer-sound-effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="help_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mascote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mascote.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
