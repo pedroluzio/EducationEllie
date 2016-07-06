@@ -44,6 +44,7 @@
             this.picHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHelp.TabIndex = 10;
             this.picHelp.TabStop = false;
+            this.picHelp.Click += new System.EventHandler(this.picHelp_Click);
             // 
             // picEllie
             // 
@@ -55,6 +56,7 @@
             this.picEllie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picEllie.TabIndex = 9;
             this.picEllie.TabStop = false;
+            this.picEllie.Click += new System.EventHandler(this.picEllie_Click);
             // 
             // EllieAjuda
             // 

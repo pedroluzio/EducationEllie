@@ -34,7 +34,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pic_opcoes = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnJuntarCores = new System.Windows.Forms.Button();
@@ -117,18 +116,6 @@
             this.pic_opcoes.TabStop = false;
             this.pic_opcoes.Click += new System.EventHandler(this.pic_opcoes_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(671, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(331, 241);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "(Click Me!!)\r\nEste form irá aparecer aquando do arranque da aplicação";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -185,7 +172,6 @@
             this.Controls.Add(this.btnJuntarCores);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pic_opcoes);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button11);
@@ -211,7 +197,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pic_opcoes;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnJuntarCores;

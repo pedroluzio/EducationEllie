@@ -15,6 +15,20 @@ namespace EllieLogicShared
         {
             InitializeComponent();
         }
-        
+
+        private void picEllie_Click(object sender, EventArgs e)
+        {
+            abreAjuda(this.Parent);
+        }        
+
+        private void picHelp_Click(object sender, EventArgs e)
+        {
+            abreAjuda(this.Parent);
+        }
+
+        private void abreAjuda(Control parent)
+        {
+            MessageBox.Show(parent.Name);
+        }
     }
 }

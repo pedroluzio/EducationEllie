@@ -8,3 +8,12 @@ C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\bin\Debug\System.N
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\bin\Debug\System.Net.Http.xml
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.dll
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.pdb
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\bin\Debug\EllieLogicShared.dll
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\bin\Debug\EllieLogicShared.pdb
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.csprojResolveAssemblyReference.cache
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.EllieAjuda.resources
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.Placar.resources
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.Properties.Resources.resources
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.csproj.GenerateResource.Cache
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.dll
+C:\Users\Pedro\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.pdb

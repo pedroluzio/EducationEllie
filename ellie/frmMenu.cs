@@ -175,12 +175,7 @@ namespace Ellie
             frmOpcoes opcoes = new frmOpcoes();
             opcoes.Show();
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            frmMascote mascote = new frmMascote("início");
-            mascote.Show();
-        }
+        
 
         private void button4_Click_1(object sender, EventArgs e)
         {

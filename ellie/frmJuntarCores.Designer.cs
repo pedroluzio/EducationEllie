@@ -39,9 +39,7 @@
             this.picCor4 = new System.Windows.Forms.PictureBox();
             this.placar1 = new EllieLogicShared.Placar();
             this.picCor7 = new System.Windows.Forms.PictureBox();
-
-           
-            
+            this.ellieAjuda1 = new EllieLogicShared.EllieAjuda();
             ((System.ComponentModel.ISupportInitialize)(this.picCor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor6)).BeginInit();
@@ -163,8 +161,14 @@
             this.picCor7.Size = new System.Drawing.Size(80, 80);
             this.picCor7.TabIndex = 37;
             this.picCor7.TabStop = false;
-
-            
+            // 
+            // ellieAjuda1
+            // 
+            this.ellieAjuda1.BackColor = System.Drawing.Color.Transparent;
+            this.ellieAjuda1.Location = new System.Drawing.Point(39, 39);
+            this.ellieAjuda1.Name = "ellieAjuda1";
+            this.ellieAjuda1.Size = new System.Drawing.Size(146, 129);
+            this.ellieAjuda1.TabIndex = 38;
             // 
             // frmJuntarCores
             // 
@@ -173,6 +177,7 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.ellieAjuda1);
             this.Controls.Add(this.picCor7);
             this.Controls.Add(this.placar1);
             this.Controls.Add(this.picCor4);
@@ -215,6 +220,6 @@
         private System.Windows.Forms.PictureBox picCor4;
         private EllieLogicShared.Placar placar1;
         private System.Windows.Forms.PictureBox picCor7;
-        
+        private EllieLogicShared.EllieAjuda ellieAjuda1;
     }
 }
