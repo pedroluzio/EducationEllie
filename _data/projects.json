@@ -1,24 +1,24 @@
 [
 	{
 		"name": "Contar",
-		"image": "placeholder.jpg",
+		"image": "contar.jpg",
 		"url": "#",
 		"date": "Jun 2016",
-		"tags": ["Angular JS","API"]
+		"tags": ["Matemática"]
 	},
 	{
 		"name": "Contas",
-		"image": "placeholder.jpg",
+		"image": "contas.jpg",
 		"url": "#",
 		"date": "Jun 2016",
-		"tags": ["Android","PHP"]
+		"tags": ["Matemática"]
 	},
 	{
 		"name": "Juntar Cores",
-		"image": "placeholder.jpg",
+		"image": "cores.jpg",
 		"url": "#",
 		"date": "Jun 2016",
-		"tags": ["HTML","JQuery","PHP"]
+		"tags": ["Lógica"]
 	}
 
 ]
