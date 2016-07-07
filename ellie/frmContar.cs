@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -13,8 +14,6 @@ namespace Ellie
 {
     public partial class frmContar : Form
     {
-        int abelhas;
-        Boolean _sound;
         public frmContar( Boolean sound=true)
         {
             InitializeComponent();
@@ -23,7 +22,10 @@ namespace Ellie
 
         Bitmap image = new Bitmap(50,50);
         int obj;
-        bool fullscreen = false;
+        int abelhas;
+        Boolean _sound;
+        Persistencia Dados = new Persistencia();
+
         private void Form1_Load(object sender, EventArgs e)
         {
             Random rnd = new Random();            obj = rnd.Next(1, 4);
@@ -41,6 +43,11 @@ namespace Ellie
             txt += "estão no quadro?";
             label1.Text = txt;
             desenhaAbelhas();
+            System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile("Crayon.ttf");
+            System.Drawing.Font font = new Font(privateFonts.Families[0], 20);
+            lblNomeScore.Font = font;
+            lblNomeScore.Text = Dados.geraResultado(false);
 
         }
         
@@ -90,9 +97,11 @@ namespace Ellie
                 Thread.Sleep(2000);
             }
             lbl_certas.Tag = Convert.ToInt32(lbl_certas.Tag) + 1;
-            lbl_certas.Text = lbl_certas.Tag.ToString();
-            
+            lbl_certas.Text = lbl_certas.Tag.ToString();            
             desenhaAbelhas();
+
+            lblNomeScore.Text = Dados.geraResultado(true, true);
+
         }
 
         public void errado()
@@ -106,6 +115,7 @@ namespace Ellie
             lbl_errado.Tag = Convert.ToInt32(lbl_errado.Tag) + 1;
             lbl_errado.Text = lbl_errado.Tag.ToString();
             desenhaAbelhas();
+            lblNomeScore.Text = Dados.geraResultado(true, false);
         }
 
         public void numeroEscolhido(int num)
@@ -116,6 +126,7 @@ namespace Ellie
                 errado();
         }
 
+        #region Evento click dos números
         private void button1_Click(object sender, EventArgs e)
         {
             numeroEscolhido(1);
@@ -168,28 +179,10 @@ namespace Ellie
             numeroEscolhido(9);
 
         }
-
+        #endregion
         private void contar_MaximumSizeChanged(object sender, EventArgs e)
         {
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            fullscreen = !fullscreen;
-            if (fullscreen)
-            {
-                this.WindowState = FormWindowState.Maximized;
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                this.Bounds = Screen.PrimaryScreen.Bounds;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(976, 590);
-                this.CenterToScreen();
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            }
-        }
+        }        
 
         private void button11_Click(object sender, EventArgs e)
         {

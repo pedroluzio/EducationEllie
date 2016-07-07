@@ -46,7 +46,7 @@
             this.lbl_errado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
-            
+            this.lblNomeScore = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -264,11 +264,11 @@
             this.lbl_certas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_certas.AutoSize = true;
             this.lbl_certas.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_certas.Font = new System.Drawing.Font("DK Crayon Crumble", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_certas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_certas.ForeColor = System.Drawing.Color.White;
             this.lbl_certas.Location = new System.Drawing.Point(90, 413);
             this.lbl_certas.Name = "lbl_certas";
-            this.lbl_certas.Size = new System.Drawing.Size(26, 35);
+            this.lbl_certas.Size = new System.Drawing.Size(29, 31);
             this.lbl_certas.TabIndex = 11;
             this.lbl_certas.Tag = "0";
             this.lbl_certas.Text = "0";
@@ -302,11 +302,11 @@
             this.lbl_errado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_errado.AutoSize = true;
             this.lbl_errado.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_errado.Font = new System.Drawing.Font("DK Crayon Crumble", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_errado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_errado.ForeColor = System.Drawing.Color.White;
             this.lbl_errado.Location = new System.Drawing.Point(90, 450);
             this.lbl_errado.Name = "lbl_errado";
-            this.lbl_errado.Size = new System.Drawing.Size(26, 35);
+            this.lbl_errado.Size = new System.Drawing.Size(29, 31);
             this.lbl_errado.TabIndex = 13;
             this.lbl_errado.Tag = "0";
             this.lbl_errado.Text = "0";
@@ -316,7 +316,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("DK Crayon Crumble", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(45, 43);
             this.label1.Name = "label1";
@@ -341,7 +341,18 @@
             this.button11.TabIndex = 17;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            
+            // 
+            // lblNomeScore
+            // 
+            this.lblNomeScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblNomeScore.ForeColor = System.Drawing.Color.White;
+            this.lblNomeScore.Location = new System.Drawing.Point(596, 37);
+            this.lblNomeScore.Name = "lblNomeScore";
+            this.lblNomeScore.Size = new System.Drawing.Size(407, 32);
+            this.lblNomeScore.TabIndex = 18;
+            this.lblNomeScore.Text = "label2";
+            this.lblNomeScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmContar
             // 
@@ -350,6 +361,7 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.lblNomeScore);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -394,7 +406,7 @@
         private System.Windows.Forms.Label lbl_errado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button11;
-        
+        private System.Windows.Forms.Label lblNomeScore;
     }
 }
 

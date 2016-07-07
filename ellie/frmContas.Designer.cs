@@ -52,7 +52,7 @@
             this.btnEnvia = new System.Windows.Forms.Button();
             this.btnApaga = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            
+            this.lblNomeScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -458,7 +458,18 @@
             this.button10.TabIndex = 9;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-
+            // 
+            // lblNomeScore
+            // 
+            this.lblNomeScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblNomeScore.ForeColor = System.Drawing.Color.White;
+            this.lblNomeScore.Location = new System.Drawing.Point(596, 37);
+            this.lblNomeScore.Name = "lblNomeScore";
+            this.lblNomeScore.Size = new System.Drawing.Size(407, 32);
+            this.lblNomeScore.TabIndex = 31;
+            this.lblNomeScore.Text = "label2";
+            this.lblNomeScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmContas
             // 
@@ -467,7 +478,7 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
-            
+            this.Controls.Add(this.lblNomeScore);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.btnEnvia);
             this.Controls.Add(this.btnApaga);
@@ -527,6 +538,6 @@
         private System.Windows.Forms.Button btnEnvia;
         private System.Windows.Forms.Button btnApaga;
         private System.Windows.Forms.Button button10;
-        
+        private System.Windows.Forms.Label lblNomeScore;
     }
 }
