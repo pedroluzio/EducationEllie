@@ -22,15 +22,12 @@ namespace Ellie
         {
             InitializeComponent();
             _sound = sound;
-            privateFonts.AddFontFile("FontAwesome.otf");
             PicArray = new PictureBox[] { picImg1, picImg2, picImg3, picImg4, picImg5, picImg6, picImg7, picImg8, picImg9 };
         }
 
         Bitmap image = new Bitmap(50, 50);
         int obj;
         bool fullscreen = false;
-        System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
-        //System.Drawing.Font font = new Font(privateFonts.Families[0], 50);
 
 
         private void Form1_Load(object sender, EventArgs e)
