@@ -6,4 +6,4 @@ permalink: /contribuir/
 
 # Junte-se a nós!
 
-#### <i class="icon-refresh"></i> Synchronize a document
+#### <i class="fa fa-github"></i> Synchronize a document
