@@ -39,17 +39,33 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flp_abelhas = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_certas = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbl_errado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
-            
+            this.picImg1 = new System.Windows.Forms.PictureBox();
+            this.picImg2 = new System.Windows.Forms.PictureBox();
+            this.picImg3 = new System.Windows.Forms.PictureBox();
+            this.picImg6 = new System.Windows.Forms.PictureBox();
+            this.picImg5 = new System.Windows.Forms.PictureBox();
+            this.picImg4 = new System.Windows.Forms.PictureBox();
+            this.picImg9 = new System.Windows.Forms.PictureBox();
+            this.picImg8 = new System.Windows.Forms.PictureBox();
+            this.picImg7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg7)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -236,9 +252,9 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button5);
@@ -250,25 +266,16 @@
             this.panel1.Size = new System.Drawing.Size(272, 270);
             this.panel1.TabIndex = 9;
             // 
-            // flp_abelhas
-            // 
-            this.flp_abelhas.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.flp_abelhas.BackColor = System.Drawing.Color.Transparent;
-            this.flp_abelhas.Location = new System.Drawing.Point(172, 155);
-            this.flp_abelhas.Name = "flp_abelhas";
-            this.flp_abelhas.Size = new System.Drawing.Size(287, 262);
-            this.flp_abelhas.TabIndex = 10;
-            // 
             // lbl_certas
             // 
             this.lbl_certas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_certas.AutoSize = true;
             this.lbl_certas.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_certas.Font = new System.Drawing.Font("DK Crayon Crumble", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_certas.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_certas.ForeColor = System.Drawing.Color.White;
             this.lbl_certas.Location = new System.Drawing.Point(90, 413);
             this.lbl_certas.Name = "lbl_certas";
-            this.lbl_certas.Size = new System.Drawing.Size(26, 35);
+            this.lbl_certas.Size = new System.Drawing.Size(29, 31);
             this.lbl_certas.TabIndex = 11;
             this.lbl_certas.Tag = "0";
             this.lbl_certas.Text = "0";
@@ -302,11 +309,11 @@
             this.lbl_errado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_errado.AutoSize = true;
             this.lbl_errado.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_errado.Font = new System.Drawing.Font("DK Crayon Crumble", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_errado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_errado.ForeColor = System.Drawing.Color.White;
             this.lbl_errado.Location = new System.Drawing.Point(90, 450);
             this.lbl_errado.Name = "lbl_errado";
-            this.lbl_errado.Size = new System.Drawing.Size(26, 35);
+            this.lbl_errado.Size = new System.Drawing.Size(29, 31);
             this.lbl_errado.TabIndex = 13;
             this.lbl_errado.Tag = "0";
             this.lbl_errado.Text = "0";
@@ -316,7 +323,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("DK Crayon Crumble", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(45, 43);
             this.label1.Name = "label1";
@@ -341,7 +348,96 @@
             this.button11.TabIndex = 17;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            
+            // 
+            // picImg1
+            // 
+            this.picImg1.BackColor = System.Drawing.Color.Transparent;
+            this.picImg1.Location = new System.Drawing.Point(160, 160);
+            this.picImg1.Name = "picImg1";
+            this.picImg1.Size = new System.Drawing.Size(80, 80);
+            this.picImg1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg1.TabIndex = 18;
+            this.picImg1.TabStop = false;
+            // 
+            // picImg2
+            // 
+            this.picImg2.BackColor = System.Drawing.Color.Transparent;
+            this.picImg2.Location = new System.Drawing.Point(246, 160);
+            this.picImg2.Name = "picImg2";
+            this.picImg2.Size = new System.Drawing.Size(80, 80);
+            this.picImg2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg2.TabIndex = 19;
+            this.picImg2.TabStop = false;
+            // 
+            // picImg3
+            // 
+            this.picImg3.BackColor = System.Drawing.Color.Transparent;
+            this.picImg3.Location = new System.Drawing.Point(332, 160);
+            this.picImg3.Name = "picImg3";
+            this.picImg3.Size = new System.Drawing.Size(80, 80);
+            this.picImg3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg3.TabIndex = 20;
+            this.picImg3.TabStop = false;
+            // 
+            // picImg6
+            // 
+            this.picImg6.BackColor = System.Drawing.Color.Transparent;
+            this.picImg6.Location = new System.Drawing.Point(332, 246);
+            this.picImg6.Name = "picImg6";
+            this.picImg6.Size = new System.Drawing.Size(80, 80);
+            this.picImg6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg6.TabIndex = 23;
+            this.picImg6.TabStop = false;
+            // 
+            // picImg5
+            // 
+            this.picImg5.BackColor = System.Drawing.Color.Transparent;
+            this.picImg5.Location = new System.Drawing.Point(246, 246);
+            this.picImg5.Name = "picImg5";
+            this.picImg5.Size = new System.Drawing.Size(80, 80);
+            this.picImg5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg5.TabIndex = 22;
+            this.picImg5.TabStop = false;
+            // 
+            // picImg4
+            // 
+            this.picImg4.BackColor = System.Drawing.Color.Transparent;
+            this.picImg4.Location = new System.Drawing.Point(160, 246);
+            this.picImg4.Name = "picImg4";
+            this.picImg4.Size = new System.Drawing.Size(80, 80);
+            this.picImg4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg4.TabIndex = 21;
+            this.picImg4.TabStop = false;
+            // 
+            // picImg9
+            // 
+            this.picImg9.BackColor = System.Drawing.Color.Transparent;
+            this.picImg9.Location = new System.Drawing.Point(332, 332);
+            this.picImg9.Name = "picImg9";
+            this.picImg9.Size = new System.Drawing.Size(80, 80);
+            this.picImg9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg9.TabIndex = 26;
+            this.picImg9.TabStop = false;
+            // 
+            // picImg8
+            // 
+            this.picImg8.BackColor = System.Drawing.Color.Transparent;
+            this.picImg8.Location = new System.Drawing.Point(246, 332);
+            this.picImg8.Name = "picImg8";
+            this.picImg8.Size = new System.Drawing.Size(80, 80);
+            this.picImg8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg8.TabIndex = 25;
+            this.picImg8.TabStop = false;
+            // 
+            // picImg7
+            // 
+            this.picImg7.BackColor = System.Drawing.Color.Transparent;
+            this.picImg7.Location = new System.Drawing.Point(160, 332);
+            this.picImg7.Name = "picImg7";
+            this.picImg7.Size = new System.Drawing.Size(80, 80);
+            this.picImg7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImg7.TabIndex = 24;
+            this.picImg7.TabStop = false;
             // 
             // frmContar
             // 
@@ -350,13 +446,21 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.picImg9);
+            this.Controls.Add(this.picImg8);
+            this.Controls.Add(this.picImg7);
+            this.Controls.Add(this.picImg6);
+            this.Controls.Add(this.picImg5);
+            this.Controls.Add(this.picImg4);
+            this.Controls.Add(this.picImg3);
+            this.Controls.Add(this.picImg2);
+            this.Controls.Add(this.picImg1);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lbl_errado);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_certas);
-            this.Controls.Add(this.flp_abelhas);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -371,6 +475,15 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImg7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,14 +500,21 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flp_abelhas;
         private System.Windows.Forms.Label lbl_certas;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbl_errado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button11;
-        
+        private System.Windows.Forms.PictureBox picImg1;
+        private System.Windows.Forms.PictureBox picImg2;
+        private System.Windows.Forms.PictureBox picImg3;
+        private System.Windows.Forms.PictureBox picImg6;
+        private System.Windows.Forms.PictureBox picImg5;
+        private System.Windows.Forms.PictureBox picImg4;
+        private System.Windows.Forms.PictureBox picImg9;
+        private System.Windows.Forms.PictureBox picImg8;
+        private System.Windows.Forms.PictureBox picImg7;
     }
 }
 

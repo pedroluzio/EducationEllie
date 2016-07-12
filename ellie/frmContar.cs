@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -13,68 +15,83 @@ namespace Ellie
 {
     public partial class frmContar : Form
     {
-        int abelhas;
+        int abelhas = 0;
         Boolean _sound;
-        public frmContar( Boolean sound=true)
+        PictureBox[] PicArray;
+        public frmContar(Boolean sound = true)
         {
             InitializeComponent();
             _sound = sound;
+            privateFonts.AddFontFile("FontAwesome.otf");
+            PicArray = new PictureBox[] { picImg1, picImg2, picImg3, picImg4, picImg5, picImg6, picImg7, picImg8, picImg9 };
         }
 
-        Bitmap image = new Bitmap(50,50);
+        Bitmap image = new Bitmap(50, 50);
         int obj;
         bool fullscreen = false;
+        System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
+        //System.Drawing.Font font = new Font(privateFonts.Families[0], 50);
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            Random rnd = new Random();            obj = rnd.Next(1, 4);
-            //1-Calculadora  2-Livro  3-fgMochilva
+            
+            Random rnd = new Random(); obj = rnd.Next(1, 4);
+            //1-Calculadora  2-Livro  3-Mochila
             string txt = "";
             switch (obj)
             {
-                case 1: txt = "Quantas calculadoras ";
+                case 1:
+                    txt = "Quantas calculadoras ";
                     break;
-                case 2: txt = "Quantos livros ";
+                case 2:
+                    txt = "Quantos livros ";
                     break;
-                case 3: txt = "Quantas mochilas ";
+                case 3:
+                    txt = "Quantas Mochilas ";
                     break;
             }
             txt += "estão no quadro?";
             label1.Text = txt;
+            foreach (PictureBox pics in PicArray)
+            {
+                switch (obj)
+                {
+                    case 1:
+                        pics.BackgroundImage = Properties.Resources.calc;
+                        break;
+                    case 2:
+                        pics.BackgroundImage = Properties.Resources.livro;
+                        break;
+                    case 3:
+                        pics.BackgroundImage = Properties.Resources.mochila;
+                        break;
+                }
+            }
             desenhaAbelhas();
 
         }
-        
+
         public int gera(int x)
         {
             Random rdn = new Random();
-            abelhas= rdn.Next(1, x);
+            int temp;
+            do
+            {
+                temp = rdn.Next(1, x);
+            } while (temp == abelhas);
+            abelhas = temp;
             return abelhas;
         }
 
         public void desenhaAbelhas()
         {
-            flp_abelhas.Controls.Clear();
+            
             int j = gera(10);
-            PictureBox[] pic = new PictureBox[j];
-            for (int i = 0; i < j; i++)
+
+            for (int i = 0; i < PicArray.Length; i++)
             {
-                pic[i] = new PictureBox();
-                pic[i].Size = new Size(80,80);
-                switch (obj)
-                {
-                    case 1:
-                        pic[i].BackgroundImage = Properties.Resources.calc;
-                        break;
-                    case 2:
-                        pic[i].BackgroundImage = Properties.Resources.livro;
-                        break;
-                    case 3:
-                        pic[i].BackgroundImage = Properties.Resources.mochila;
-                        break;
-                }
-                pic[i].BackgroundImageLayout = ImageLayout.Stretch;
-                pic[i].Visible = true;
-                flp_abelhas.Controls.Add(pic[i]);
+                PicArray[i].Visible = i < j ? true : false;
             }
 
 
@@ -91,7 +108,7 @@ namespace Ellie
             }
             lbl_certas.Tag = Convert.ToInt32(lbl_certas.Tag) + 1;
             lbl_certas.Text = lbl_certas.Tag.ToString();
-            
+
             desenhaAbelhas();
         }
 
@@ -197,7 +214,7 @@ namespace Ellie
                 this.Close();
         }
 
-       
+
     }
-    
+
 }
