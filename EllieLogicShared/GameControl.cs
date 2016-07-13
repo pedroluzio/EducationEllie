@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -13,8 +14,9 @@ namespace EllieLogicShared
         Int32 erros, acertos;
 
         Boolean _sound;
-        public Boolean EfeitoSonoroHabilitado {
-        get { return this._sound; }
+        public Boolean EfeitoSonoroHabilitado
+        {
+            get { return this._sound; }
             set { this._sound = value; }
         }
 
@@ -48,9 +50,20 @@ namespace EllieLogicShared
             this.erros = 0;
             this.acertos = 0;
             this._sound = true;
-            this._placar = placar != null ? placar:new Placar();
+            StreamReader sr = new StreamReader("config.ini");
+            string text = sr.ReadToEnd();
+            try
+            {
+                string temp = text.Substring(text.IndexOf("[geral]") + 9);
+                temp = temp.Substring(temp.IndexOf("som") + 4, temp.IndexOf("\r\n", temp.IndexOf("som")) - (temp.IndexOf("som") + 4));
+                this._sound = Convert.ToBoolean(temp);
+            }
+            catch { }
+            sr.Close();
+            
+            this._placar = placar != null ? placar : new Placar();
             this._jogadas_permitidas = 50;
-         
+
         }
 
         public void configurarPlacar(Placar placar)
@@ -74,10 +87,10 @@ namespace EllieLogicShared
 
             if (_jogadas < this._jogadas_permitidas)
             {
-                this.validarJogada(valor1,valor2);
+                this.validarJogada(valor1, valor2);
                 this._jogadas++;
             }
-            
+
         }
 
         public Placar.RESULTADO_JOGADA validarJogada(object valor1, object valor2)
@@ -101,13 +114,13 @@ namespace EllieLogicShared
                 {
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer(EllieLogicShared.Properties.Resources.som_erro);
                     player.Play();
-                    Thread.Sleep(2000);                  
+                    Thread.Sleep(2000);
                 }
 
                 _placar.atualizarPlacar(Placar.RESULTADO_JOGADA.ERRO);
                 return Placar.RESULTADO_JOGADA.ERRO;
-            }           
-            
+            }
+
         }
 
         public void calcularResultadoFinal()
@@ -123,7 +136,7 @@ namespace EllieLogicShared
 
         public int obterQuantidadeJogadasRestantes()
         {
-            return this._jogadas_permitidas- this._jogadas;
+            return this._jogadas_permitidas - this._jogadas;
         }
 
 

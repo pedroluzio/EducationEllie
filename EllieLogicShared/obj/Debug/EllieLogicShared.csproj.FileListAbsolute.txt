@@ -19,3 +19,14 @@ C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.P
 C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.csproj.GenerateResource.Cache
 C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.dll
 C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.pdb
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\bin\Debug\EllieLogicShared.dll
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\bin\Debug\EllieLogicShared.pdb
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\bin\Debug\System.Net.Http.dll
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\bin\Debug\System.Net.Http.xml
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.csprojResolveAssemblyReference.cache
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.EllieAjuda.resources
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.Placar.resources
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.Properties.Resources.resources
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.csproj.GenerateResource.Cache
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.dll
+C:\Users\pluzio\Documents\GitHub\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.pdb

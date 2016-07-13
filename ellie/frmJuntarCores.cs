@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EllieLogicShared;
+using System.Drawing.Text;
 
 namespace Ellie
 {
@@ -30,6 +31,7 @@ namespace Ellie
 
         Image corTentativa;
 
+        Persistencia Dados = new Persistencia();
 
         public frmJuntarCores(Boolean sound)
         {
@@ -60,9 +62,14 @@ namespace Ellie
             
 
             game_juntarcores.inicializar(placar1);         
-            geraCor(cor);         
+            geraCor(cor);
+            System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile("Crayon.ttf");
+            System.Drawing.Font font = new Font(privateFonts.Families[0], 20);
+            lblNomeScore.Font = font;
+            lblNomeScore.Text = Dados.geraResultado(false);
 
-            
+
         }
 
 
@@ -156,10 +163,14 @@ namespace Ellie
             }
             else
             {
+                int tempCerto = Convert.ToInt32(placar1.lblCertas.Text);
+                int tempErrado = Convert.ToInt32(placar1.lblErradas.Text);
                 game_juntarcores.fazerJogada(corTentativa, pic.Image);              
           
                 corTentativa = null;
-
+                int certas=Convert.ToInt32(placar1.lblCertas.Text)-tempCerto; 
+                int erradas= Convert.ToInt32(placar1.lblErradas.Text)-tempErrado;
+                lblNomeScore.Text = Dados.mostraComRespostas(certas, erradas);
                 geraCor(CorPar);
             }            
         }

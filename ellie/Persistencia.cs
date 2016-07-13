@@ -109,7 +109,7 @@ namespace Ellie
 
                         com.CommandText = "UPDATE GameResults SET Score=Score" + (Acerto ? "+" : "-") + "1 WHERE ID=" + idPlayer.ToString();
                         com.ExecuteNonQuery();
-                    } 
+                    }
                 }
 
                 com.CommandText = "Select PlayerName, Score FROM GameResults WHERE ID =" + idPlayer.ToString();
@@ -121,6 +121,40 @@ namespace Ellie
             }
             return Label;
 
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="certo">Quantidade respostas certas</param>
+        /// <param name="errado">Quantidade respostas erradas</param>
+        public string mostraComRespostas(int certo, int errado)
+        {
+            string Label = "";
+            int pontos=0;
+            using (System.Data.SQLite.SQLiteCommand com = new System.Data.SQLite.SQLiteCommand(conexao))
+            {
+                conexao.Open();
+
+                com.CommandText = "Select Score FROM GameResults WHERE ID =" + idPlayer.ToString();
+                using (System.Data.SQLite.SQLiteDataReader reader = com.ExecuteReader())
+                    while (reader.Read())
+                        pontos = Convert.ToInt32(reader["Score"].ToString());
+                int update = certo-errado;
+                update = pontos + update < 0 ? 0 : update;
+
+
+                com.CommandText = "UPDATE GameResults SET Score=Score+"+update+" WHERE ID=" + idPlayer.ToString();
+                com.ExecuteNonQuery();
+
+                com.CommandText = "Select PlayerName, Score FROM GameResults WHERE ID =" + idPlayer.ToString();
+                using (System.Data.SQLite.SQLiteDataReader reader = com.ExecuteReader())
+                    while (reader.Read())
+                        Label = reader["PlayerName"].ToString() + " - " + reader["Score"].ToString();
+
+                conexao.Close();        // Close the connection to the database
+            }
+            return Label;
         }
     }
 }

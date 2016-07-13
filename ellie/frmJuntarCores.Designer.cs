@@ -39,9 +39,7 @@
             this.picCor4 = new System.Windows.Forms.PictureBox();
             this.placar1 = new EllieLogicShared.Placar();
             this.picCor7 = new System.Windows.Forms.PictureBox();
-
-           
-            
+            this.lblNomeScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCor6)).BeginInit();
@@ -163,8 +161,18 @@
             this.picCor7.Size = new System.Drawing.Size(80, 80);
             this.picCor7.TabIndex = 37;
             this.picCor7.TabStop = false;
-
-            
+            // 
+            // lblNomeScore
+            // 
+            this.lblNomeScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblNomeScore.ForeColor = System.Drawing.Color.White;
+            this.lblNomeScore.Location = new System.Drawing.Point(589, 40);
+            this.lblNomeScore.Name = "lblNomeScore";
+            this.lblNomeScore.Size = new System.Drawing.Size(407, 32);
+            this.lblNomeScore.TabIndex = 38;
+            this.lblNomeScore.Text = "label2";
+            this.lblNomeScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmJuntarCores
             // 
@@ -173,6 +181,7 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.lblNomeScore);
             this.Controls.Add(this.picCor7);
             this.Controls.Add(this.placar1);
             this.Controls.Add(this.picCor4);
@@ -215,6 +224,6 @@
         private System.Windows.Forms.PictureBox picCor4;
         private EllieLogicShared.Placar placar1;
         private System.Windows.Forms.PictureBox picCor7;
-        
+        private System.Windows.Forms.Label lblNomeScore;
     }
 }
