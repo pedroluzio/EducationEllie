@@ -16,20 +16,20 @@ namespace Ellie
 {
     public partial class frmContar : Form
     {
-        int abelhas = 0;
+        int abelhas;
         Boolean _sound;
-        PictureBox[] PicArray;
-        public frmContar(Boolean sound = true)
+        public frmContar( Boolean sound=true)
         {
             InitializeComponent();
             _sound = sound;
             PicArray = new PictureBox[] { picImg1, picImg2, picImg3, picImg4, picImg5, picImg6, picImg7, picImg8, picImg9 };
         }
 
-        Bitmap image = new Bitmap(50, 50);
-        int obj=0, mudar=10;
-        bool fullscreen = false;
-
+        Bitmap image = new Bitmap(50,50);
+        int obj;
+        int abelhas=0;
+        Boolean _sound;
+        Persistencia Dados = new Persistencia();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -87,6 +87,11 @@ namespace Ellie
                         break;
                 }
             }
+            System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile("Crayon.ttf");
+            System.Drawing.Font font = new Font(privateFonts.Families[0], 20);
+            lblNomeScore.Font = font;
+            lblNomeScore.Text = Dados.geraResultado(false);
         }
 
         public int gera(int x)
@@ -131,6 +136,9 @@ namespace Ellie
             lbl_certas.Text = lbl_certas.Tag.ToString();
 
             desenhaAbelhas();
+
+            lblNomeScore.Text = Dados.geraResultado(true, true);
+
         }
 
         public void errado()
@@ -144,6 +152,7 @@ namespace Ellie
             lbl_errado.Tag = Convert.ToInt32(lbl_errado.Tag) + 1;
             lbl_errado.Text = lbl_errado.Tag.ToString();
             desenhaAbelhas();
+            lblNomeScore.Text = Dados.geraResultado(true, false);
         }
 
         public void numeroEscolhido(int num)
@@ -218,7 +227,7 @@ namespace Ellie
                 this.Close();
         }
 
-
+       
     }
-
+    
 }

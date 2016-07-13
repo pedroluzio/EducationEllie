@@ -60,6 +60,7 @@
             this.flpAjuda3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flpAjuda4 = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblNomeScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -527,6 +528,18 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblNomeScore
+            // 
+            this.lblNomeScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblNomeScore.ForeColor = System.Drawing.Color.White;
+            this.lblNomeScore.Location = new System.Drawing.Point(596, 37);
+            this.lblNomeScore.Name = "lblNomeScore";
+            this.lblNomeScore.Size = new System.Drawing.Size(407, 32);
+            this.lblNomeScore.TabIndex = 31;
+            this.lblNomeScore.Text = "label2";
+            this.lblNomeScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmContas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,6 +553,7 @@
             this.Controls.Add(this.flpAjuda1);
             this.Controls.Add(this.picHelp);
             this.Controls.Add(this.picEllie);
+            this.Controls.Add(this.lblNomeScore);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.btnEnvia);
             this.Controls.Add(this.btnApaga);
@@ -608,5 +622,6 @@
         private System.Windows.Forms.FlowLayoutPanel flpAjuda3;
         private System.Windows.Forms.FlowLayoutPanel flpAjuda4;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblNomeScore;
     }
 }

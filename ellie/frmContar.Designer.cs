@@ -54,6 +54,7 @@
             this.picImg9 = new System.Windows.Forms.PictureBox();
             this.picImg8 = new System.Windows.Forms.PictureBox();
             this.picImg7 = new System.Windows.Forms.PictureBox();
+            this.lblNomeScore = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -455,6 +456,7 @@
             this.Controls.Add(this.picImg3);
             this.Controls.Add(this.picImg2);
             this.Controls.Add(this.picImg1);
+            this.Controls.Add(this.lblNomeScore);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -515,6 +517,7 @@
         private System.Windows.Forms.PictureBox picImg9;
         private System.Windows.Forms.PictureBox picImg8;
         private System.Windows.Forms.PictureBox picImg7;
+        private System.Windows.Forms.Label lblNomeScore;
     }
 }
 

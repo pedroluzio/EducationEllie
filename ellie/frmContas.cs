@@ -15,13 +15,14 @@ namespace Ellie
 {
     public partial class frmContas : Form
     {
-        Boolean _sound;
         public frmContas(Boolean sound = true)
         {
             InitializeComponent();
             this._sound = sound;
         }
 
+        Boolean _sound;
+        Persistencia Dados = new Persistencia();
         public void numeroEscolhido(int num)
         {
             lblResultado.Text += num;
@@ -138,6 +139,7 @@ namespace Ellie
 
             btnApaga.PerformClick();
             mudaNumeros();
+            lblNomeScore.Text = Dados.geraResultado(true, true);
 
         }
 
@@ -154,6 +156,7 @@ namespace Ellie
 
             btnApaga.PerformClick();
             mudaNumeros();
+            lblNomeScore.Text = Dados.geraResultado(true, false);
         }
 
         private void ajuda()
@@ -290,11 +293,12 @@ namespace Ellie
             catch { }
             System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
             privateFonts.AddFontFile("Crayon.ttf");
-            System.Drawing.Font font = new Font(privateFonts.Families[0], 50);
-            lblResultado.Font = font;
+            System.Drawing.Font font = new Font(privateFonts.Families[0], 20);
+            lblNomeScore.Font = font;
             label1.Font = font;
             mudaNumeros();
             btnApaga.PerformClick();
+            lblNomeScore.Text = Dados.geraResultado(false);
         }
 
         private void btnApaga_Click(object sender, EventArgs e)
