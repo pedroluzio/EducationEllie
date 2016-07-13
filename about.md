@@ -2,6 +2,7 @@
 layout: page
 title: Sobre
 permalink: /about/
+published: true
 ---
 
 # Education Ellie
@@ -24,4 +25,3 @@ Tem problemas com software? Contate [education.ellie.project@gmail.com](educatio
 
 ***
 2016/07/01
-***
