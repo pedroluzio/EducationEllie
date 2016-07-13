@@ -62,3 +62,6 @@ C:\Users\pluzio\Desktop\Education\EducationEllie-master\ellie\obj\Debug\Ellie.fr
 C:\Users\pluzio\Desktop\Education\EducationEllie-master\ellie\obj\Debug\Ellie.Properties.Resources.resources
 C:\Users\pluzio\Desktop\Education\EducationEllie-master\ellie\obj\Debug\Ellie.frmNome.resources
 C:\Users\pluzio\Desktop\Education\EducationEllie-master\ellie\obj\Debug\Ellie.csproj.GenerateResource.Cache
+C:\Users\pluzio\Source\Repos\ellie\ellie\bin\Debug\Ellie.exe.config
+C:\Users\pluzio\Source\Repos\ellie\ellie\obj\Debug\Ellie.exe
+C:\Users\pluzio\Source\Repos\ellie\ellie\obj\Debug\Ellie.pdb
