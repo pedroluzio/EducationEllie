@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -26,14 +27,35 @@ namespace Ellie
         }
 
         Bitmap image = new Bitmap(50, 50);
-        int obj;
+        int obj=0, mudar=10;
         bool fullscreen = false;
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            Random rnd = new Random(); obj = rnd.Next(1, 4);
+            try
+            {
+                StreamReader sr = new StreamReader("config.ini");
+                string text = sr.ReadToEnd();
+                string temp = text.Substring(text.IndexOf("[contar]") + 10);
+                temp = temp.Substring(temp.IndexOf("mudar") + 6, temp.IndexOf("\r\n", temp.IndexOf("mudar")) - (temp.IndexOf("mudar") + 6));
+                mudar = Convert.ToInt32(temp);
+                sr.Close();
+            }
+            catch { }
+            geraObjeto();
+            desenhaAbelhas();
+
+        }
+
+        public void geraObjeto()
+        {
+            Random rnd = new Random();
+            int temp = obj;
+            do
+            {
+                obj = rnd.Next(1, 4); 
+            } while (obj==temp);
             //1-Calculadora  2-Livro  3-Mochila
             string txt = "";
             switch (obj)
@@ -65,8 +87,6 @@ namespace Ellie
                         break;
                 }
             }
-            desenhaAbelhas();
-
         }
 
         public int gera(int x)
@@ -83,7 +103,11 @@ namespace Ellie
 
         public void desenhaAbelhas()
         {
-            
+            int jogadas = Convert.ToInt32(lbl_certas.Text) + Convert.ToInt32(lbl_errado.Text);
+            if (jogadas%mudar==0)
+            {
+                geraObjeto();
+            }
             int j = gera(10);
 
             for (int i = 0; i < PicArray.Length; i++)
@@ -130,6 +154,7 @@ namespace Ellie
                 errado();
         }
 
+        #region Evento Click dos números
         private void button1_Click(object sender, EventArgs e)
         {
             numeroEscolhido(1);
@@ -182,29 +207,11 @@ namespace Ellie
             numeroEscolhido(9);
 
         }
-
+        #endregion
         private void contar_MaximumSizeChanged(object sender, EventArgs e)
         {
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            fullscreen = !fullscreen;
-            if (fullscreen)
-            {
-                this.WindowState = FormWindowState.Maximized;
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                this.Bounds = Screen.PrimaryScreen.Bounds;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(976, 590);
-                this.CenterToScreen();
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            }
-        }
-
+        
         private void button11_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Queres mesmo sair?", "Sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)

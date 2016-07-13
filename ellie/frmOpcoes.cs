@@ -17,28 +17,41 @@ namespace Ellie
         {
             InitializeComponent();
         }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
             StreamReader sr = new StreamReader("config.ini");
             string text = sr.ReadToEnd();
             String temp;
-            temp = text.Substring(text.IndexOf("[contar]") + 10);
-            temp = temp.Substring(temp.IndexOf("sair") + 5, temp.IndexOf("\r\n")-(temp.IndexOf("sair") + 5));
-            nud_contarSair.Value = Convert.ToInt32(temp);
 
-            temp = text.Substring(text.IndexOf("[contar]") + 10);
-            temp = temp.Substring(temp.IndexOf("mudar") + 6, temp.IndexOf("\r\n", temp.IndexOf("mudar")) - (temp.IndexOf("mudar") + 6));
-            nud_contarMudar.Value = Convert.ToInt32(temp);
+            try
+            {
+                temp = text.Substring(text.IndexOf("[contar]") + 10);
+                temp = temp.Substring(temp.IndexOf("mudar") + 6, temp.IndexOf("\r\n", temp.IndexOf("mudar")) - (temp.IndexOf("mudar") + 6));
+                nudContarMudar.Value = Convert.ToInt32(temp);
+
+                temp = text.Substring(text.IndexOf("[contas]") + 10);
+                temp = temp.Substring(temp.IndexOf("multiplicacao") + 14, temp.IndexOf("\r\n", temp.IndexOf("multiplicacao")) - (temp.IndexOf("multiplicacao") + 14));
+                nudContasMultiplicacao.Value = Convert.ToInt32(temp);
+
+                temp = text.Substring(text.IndexOf("[geral]") + 9);
+                temp = temp.Substring(temp.IndexOf("som") + 4, temp.IndexOf("\r\n", temp.IndexOf("som")) - (temp.IndexOf("som") + 4));
+                cheSom.Checked = Convert.ToBoolean(temp);
+                
+            }
+            catch { }
             sr.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("[geral]");
+            sb.AppendLine("som=" + cheSom.Checked.ToString());
             sb.AppendLine("[contar]");
-            sb.AppendLine("sair=" + nud_contarSair.Value);
-            sb.AppendLine("mudar=" + nud_contarMudar.Value);
+            sb.AppendLine("mudar=" + nudContarMudar.Value);
+            sb.AppendLine("[contas]");
+            sb.AppendLine("multiplicacao=" + nudContasMultiplicacao.Value);
             sb.AppendLine("********");
 
             TextWriter tw = new StreamWriter("config.ini");
@@ -59,5 +72,6 @@ namespace Ellie
         {
 
         }
+        
     }
 }

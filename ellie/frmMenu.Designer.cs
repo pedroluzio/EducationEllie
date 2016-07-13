@@ -35,7 +35,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.pic_opcoes = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSom = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnJuntarCores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_opcoes)).BeginInit();
@@ -129,22 +129,22 @@
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button4
+            // btnSom
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::Ellie.Properties.Resources.muteOff;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(868, 38);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 40);
-            this.button4.TabIndex = 22;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btnSom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSom.BackColor = System.Drawing.Color.Transparent;
+            this.btnSom.BackgroundImage = global::Ellie.Properties.Resources.muteOff;
+            this.btnSom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSom.FlatAppearance.BorderSize = 0;
+            this.btnSom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSom.Location = new System.Drawing.Point(868, 38);
+            this.btnSom.Name = "btnSom";
+            this.btnSom.Size = new System.Drawing.Size(40, 40);
+            this.btnSom.TabIndex = 22;
+            this.btnSom.UseVisualStyleBackColor = false;
+            this.btnSom.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // pictureBox1
             // 
@@ -184,7 +184,7 @@
             this.ClientSize = new System.Drawing.Size(1040, 566);
             this.Controls.Add(this.btnJuntarCores);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnSom);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pic_opcoes);
             this.Controls.Add(this.button5);
@@ -212,7 +212,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pic_opcoes;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnJuntarCores;
     }

@@ -32,6 +32,23 @@ namespace Ellie
             btnContar.Cursor = Cursors.Hand;
             btnContas.Cursor = Cursors.Hand;
 
+            StreamReader sr = new StreamReader("config.ini");
+            string text = sr.ReadToEnd();
+            String temp;
+
+            try
+            {
+                temp = text.Substring(text.IndexOf("[geral]") + 9);
+                temp = temp.Substring(temp.IndexOf("som") + 4, temp.IndexOf("\r\n", temp.IndexOf("som")) - (temp.IndexOf("som") + 4));
+                sound = Convert.ToBoolean(temp);
+                btnSom.PerformClick();
+                btnSom.PerformClick();
+
+            }
+            catch { }
+            sr.Close();
+
+
             frmMascote mascote = new frmMascote("início");
             mascote.ShowDialog();
 
@@ -117,24 +134,6 @@ namespace Ellie
             frmContas.Show();
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            fullscreen = !fullscreen;
-            if (fullscreen)
-            {
-                this.WindowState = FormWindowState.Maximized;
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-                this.Bounds = Screen.PrimaryScreen.Bounds;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = new Size(976, 590);
-                this.CenterToScreen();
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            }
-        }
-
         private void button11_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Queres mesmo sair?", "Sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
@@ -148,7 +147,7 @@ namespace Ellie
 
         private void button5_Click(object sender, EventArgs e)
         {
-            WebRequest wr = WebRequest.Create(new Uri("http://pappl.bugs3.com/version.txt"));
+            /*WebRequest wr = WebRequest.Create(new Uri("http://pappl.bugs3.com/version.txt"));
             WebResponse ws = wr.GetResponse();
             StreamReader sr = new StreamReader(ws.GetResponseStream());
 
@@ -166,7 +165,7 @@ namespace Ellie
 
                 Process.Start(file.FullName);
                 this.Close();
-            }
+            }*/
 
         }
 
@@ -185,9 +184,9 @@ namespace Ellie
         private void button4_Click_1(object sender, EventArgs e)
         {
             if (sound)
-                button4.BackgroundImage = Properties.Resources.muteOn;
+                btnSom.BackgroundImage = Properties.Resources.muteOn;
             else
-                button4.BackgroundImage = Properties.Resources.muteOff;
+                btnSom.BackgroundImage = Properties.Resources.muteOff;
             sound = !sound;
         }
 

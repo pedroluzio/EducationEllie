@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button11 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -52,7 +53,13 @@
             this.btnEnvia = new System.Windows.Forms.Button();
             this.btnApaga = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            
+            this.picEllie = new System.Windows.Forms.PictureBox();
+            this.picHelp = new System.Windows.Forms.PictureBox();
+            this.flpAjuda1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpAjuda2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpAjuda3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpAjuda4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -60,6 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picNum2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEllie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelp)).BeginInit();
             this.SuspendLayout();
             // 
             // button11
@@ -347,7 +356,7 @@
             // 
             this.picNum1.BackColor = System.Drawing.Color.Transparent;
             this.picNum1.Image = global::Ellie.Properties.Resources.btn1;
-            this.picNum1.Location = new System.Drawing.Point(81, 204);
+            this.picNum1.Location = new System.Drawing.Point(81, 171);
             this.picNum1.Name = "picNum1";
             this.picNum1.Size = new System.Drawing.Size(80, 80);
             this.picNum1.TabIndex = 26;
@@ -357,7 +366,7 @@
             // 
             this.picNum2.BackColor = System.Drawing.Color.Transparent;
             this.picNum2.Image = global::Ellie.Properties.Resources.btn1;
-            this.picNum2.Location = new System.Drawing.Point(213, 204);
+            this.picNum2.Location = new System.Drawing.Point(213, 171);
             this.picNum2.Name = "picNum2";
             this.picNum2.Size = new System.Drawing.Size(80, 80);
             this.picNum2.TabIndex = 27;
@@ -367,7 +376,7 @@
             // 
             this.picSinal.BackColor = System.Drawing.Color.Transparent;
             this.picSinal.Image = global::Ellie.Properties.Resources.mais;
-            this.picSinal.Location = new System.Drawing.Point(167, 228);
+            this.picSinal.Location = new System.Drawing.Point(167, 195);
             this.picSinal.Name = "picSinal";
             this.picSinal.Size = new System.Drawing.Size(40, 40);
             this.picSinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -378,7 +387,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Ellie.Properties.Resources.igual;
-            this.pictureBox5.Location = new System.Drawing.Point(299, 204);
+            this.pictureBox5.Location = new System.Drawing.Point(299, 171);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(80, 80);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -391,7 +400,7 @@
             this.lblResultado.BackColor = System.Drawing.Color.Transparent;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.ForeColor = System.Drawing.Color.White;
-            this.lblResultado.Location = new System.Drawing.Point(369, 205);
+            this.lblResultado.Location = new System.Drawing.Point(369, 172);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(70, 76);
             this.lblResultado.TabIndex = 30;
@@ -458,7 +467,65 @@
             this.button10.TabIndex = 9;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
-
+            // 
+            // picEllie
+            // 
+            this.picEllie.BackColor = System.Drawing.Color.Transparent;
+            this.picEllie.Image = global::Ellie.Properties.Resources.mascoteGif1;
+            this.picEllie.Location = new System.Drawing.Point(42, 43);
+            this.picEllie.Name = "picEllie";
+            this.picEllie.Size = new System.Drawing.Size(119, 128);
+            this.picEllie.TabIndex = 31;
+            this.picEllie.TabStop = false;
+            this.picEllie.Click += new System.EventHandler(this.picEllie_Click);
+            // 
+            // picHelp
+            // 
+            this.picHelp.BackColor = System.Drawing.Color.Transparent;
+            this.picHelp.Image = global::Ellie.Properties.Resources.helpGif;
+            this.picHelp.Location = new System.Drawing.Point(136, 33);
+            this.picHelp.Name = "picHelp";
+            this.picHelp.Size = new System.Drawing.Size(40, 50);
+            this.picHelp.TabIndex = 32;
+            this.picHelp.TabStop = false;
+            this.picHelp.Click += new System.EventHandler(this.picHelp_Click);
+            // 
+            // flpAjuda1
+            // 
+            this.flpAjuda1.BackColor = System.Drawing.Color.Transparent;
+            this.flpAjuda1.Location = new System.Drawing.Point(81, 257);
+            this.flpAjuda1.Name = "flpAjuda1";
+            this.flpAjuda1.Size = new System.Drawing.Size(368, 35);
+            this.flpAjuda1.TabIndex = 33;
+            // 
+            // flpAjuda2
+            // 
+            this.flpAjuda2.BackColor = System.Drawing.Color.Transparent;
+            this.flpAjuda2.Location = new System.Drawing.Point(81, 298);
+            this.flpAjuda2.Name = "flpAjuda2";
+            this.flpAjuda2.Size = new System.Drawing.Size(368, 35);
+            this.flpAjuda2.TabIndex = 34;
+            // 
+            // flpAjuda3
+            // 
+            this.flpAjuda3.BackColor = System.Drawing.Color.Transparent;
+            this.flpAjuda3.Location = new System.Drawing.Point(81, 339);
+            this.flpAjuda3.Name = "flpAjuda3";
+            this.flpAjuda3.Size = new System.Drawing.Size(368, 35);
+            this.flpAjuda3.TabIndex = 36;
+            // 
+            // flpAjuda4
+            // 
+            this.flpAjuda4.BackColor = System.Drawing.Color.Transparent;
+            this.flpAjuda4.Location = new System.Drawing.Point(81, 380);
+            this.flpAjuda4.Name = "flpAjuda4";
+            this.flpAjuda4.Size = new System.Drawing.Size(368, 35);
+            this.flpAjuda4.TabIndex = 35;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmContas
             // 
@@ -467,7 +534,12 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
-            
+            this.Controls.Add(this.flpAjuda3);
+            this.Controls.Add(this.flpAjuda4);
+            this.Controls.Add(this.flpAjuda2);
+            this.Controls.Add(this.flpAjuda1);
+            this.Controls.Add(this.picHelp);
+            this.Controls.Add(this.picEllie);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.btnEnvia);
             this.Controls.Add(this.btnApaga);
@@ -496,6 +568,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picNum2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEllie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHelp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -527,6 +601,12 @@
         private System.Windows.Forms.Button btnEnvia;
         private System.Windows.Forms.Button btnApaga;
         private System.Windows.Forms.Button button10;
-        
+        private System.Windows.Forms.PictureBox picEllie;
+        private System.Windows.Forms.PictureBox picHelp;
+        private System.Windows.Forms.FlowLayoutPanel flpAjuda1;
+        private System.Windows.Forms.FlowLayoutPanel flpAjuda2;
+        private System.Windows.Forms.FlowLayoutPanel flpAjuda3;
+        private System.Windows.Forms.FlowLayoutPanel flpAjuda4;
+        private System.Windows.Forms.Timer timer1;
     }
 }
