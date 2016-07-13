@@ -440,6 +440,18 @@
             this.picImg7.TabIndex = 24;
             this.picImg7.TabStop = false;
             // 
+            // lblNomeScore
+            // 
+            this.lblNomeScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblNomeScore.ForeColor = System.Drawing.Color.White;
+            this.lblNomeScore.Location = new System.Drawing.Point(596, 37);
+            this.lblNomeScore.Name = "lblNomeScore";
+            this.lblNomeScore.Size = new System.Drawing.Size(407, 32);
+            this.lblNomeScore.TabIndex = 31;
+            this.lblNomeScore.Text = "label2";
+            this.lblNomeScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmContar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

@@ -295,7 +295,6 @@ namespace Ellie
             privateFonts.AddFontFile("Crayon.ttf");
             System.Drawing.Font font = new Font(privateFonts.Families[0], 20);
             lblNomeScore.Font = font;
-            label1.Font = font;
             mudaNumeros();
             btnApaga.PerformClick();
             lblNomeScore.Text = Dados.geraResultado(false);

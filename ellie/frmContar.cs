@@ -16,8 +16,8 @@ namespace Ellie
 {
     public partial class frmContar : Form
     {
-        int abelhas;
-        Boolean _sound;
+        PictureBox[] PicArray;
+        int mudar = 10;
         public frmContar( Boolean sound=true)
         {
             InitializeComponent();

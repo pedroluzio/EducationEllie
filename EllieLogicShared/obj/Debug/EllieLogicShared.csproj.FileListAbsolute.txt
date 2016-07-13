@@ -8,3 +8,14 @@ C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\bin\Debug\System.N
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\bin\Debug\System.Net.Http.xml
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.dll
 C:\Users\Janynne\Source\Repos\EducationEllie\EllieLogicShared\obj\Debug\EllieLogicShared.pdb
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\bin\Debug\EllieLogicShared.dll
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\bin\Debug\EllieLogicShared.pdb
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\bin\Debug\System.Net.Http.dll
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\bin\Debug\System.Net.Http.xml
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.csprojResolveAssemblyReference.cache
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.EllieAjuda.resources
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.Placar.resources
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.Properties.Resources.resources
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.csproj.GenerateResource.Cache
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.dll
+C:\Users\pluzio\Source\Repos\ellie\EllieLogicShared\obj\Debug\EllieLogicShared.pdb
