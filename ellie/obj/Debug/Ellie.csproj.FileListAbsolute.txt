@@ -98,3 +98,6 @@ C:\Users\pluzio\Documents\GitHub\EducationEllie\ellie\bin\Debug\Ellie.exe.manife
 C:\Users\pluzio\Documents\GitHub\EducationEllie\ellie\bin\Debug\Ellie.application
 C:\Users\pluzio\Documents\GitHub\EducationEllie\ellie\obj\Debug\Ellie.exe.manifest
 C:\Users\pluzio\Documents\GitHub\EducationEllie\ellie\obj\Debug\Ellie.application
+C:\Users\pluzio\Source\Repos\ellie\ellie\bin\Debug\Ellie.exe.config
+C:\Users\pluzio\Source\Repos\ellie\ellie\obj\Debug\Ellie.exe
+C:\Users\pluzio\Source\Repos\ellie\ellie\obj\Debug\Ellie.pdb
