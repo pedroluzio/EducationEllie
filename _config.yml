@@ -28,16 +28,16 @@ urls:
       icon: fa-envelope
       
 social:
-    - icon: fa-facebook
-      link: '#'
-    - icon: fa-skype
-      link: '#'
-    - icon: fa-twitter
-      link: '#'
-    - icon: fa-linkedin
-      link: '#'
-    - icon: fa-stack-exchange
-      link: '#'
+    #- icon: fa-facebook
+    #  link: '#'
+    #- icon: fa-skype
+    #  link: '#'
+    #- icon: fa-twitter
+    #  link: '#'
+    #- icon: fa-linkedin
+    #  link: '#'
+    #- icon: fa-stack-exchange
+    #  link: '#'
 
 share:
   twitter_username: \#
@@ -47,7 +47,7 @@ share:
 enableTags: true
 tagarray: []
 
-url: "http://aboutashu.com/hcz-jekyll-blog"
+url: "http://pedroluzio.github.io/EducationEllie/"
 baseurl: "/EducationEllie"
 paginate: 20
 per_page: 20
