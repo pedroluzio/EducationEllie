@@ -1,5 +1,8 @@
 ---
-published: true
+layout: post
+title: Lançamento
+date:   2016-07-14
+categories: others
 ---
 #Lançamento
 
