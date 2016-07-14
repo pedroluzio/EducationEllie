@@ -177,7 +177,9 @@ namespace Ellie
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Queres mesmo sair?", "Sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            MessageBoard msg = new MessageBoard("Queres mesmo sair?");
+
+            if (msg.ShowDialog() == System.Windows.Forms.DialogResult.Yes)
             {
                 game_juntarcores.encerrar();
                 this.Close();

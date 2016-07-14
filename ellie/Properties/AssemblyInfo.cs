@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Ellie - Software Educativo")]
 [assembly: AssemblyDescription("Software Educativo desenvolvido como projeto de PAP do Curso Profissional Técnico de Gestão e Programação de Sistemas Informáticos.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Pedro Luzio - Agrupamento de Escolas Marinha Grande Nascente)")]
+[assembly: AssemblyCompany("Education Ellie")]
 [assembly: AssemblyProduct("Ellie - Software Educativo")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]

@@ -103,6 +103,16 @@ namespace Ellie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap balaoContas {
+            get {
+                object obj = ResourceManager.GetObject("balaoContas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bg_next {
             get {
                 object obj = ResourceManager.GetObject("bg_next", resourceCulture);
@@ -341,6 +351,16 @@ namespace Ellie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FundoBalao {
+            get {
+                object obj = ResourceManager.GetObject("FundoBalao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FundoJogos {
             get {
                 object obj = ResourceManager.GetObject("FundoJogos", resourceCulture);
@@ -451,6 +471,16 @@ namespace Ellie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maisCor {
+            get {
+                object obj = ResourceManager.GetObject("maisCor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mascoreGif1 {
             get {
                 object obj = ResourceManager.GetObject("mascoreGif1", resourceCulture);
@@ -551,6 +581,16 @@ namespace Ellie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menosCor {
+            get {
+                object obj = ResourceManager.GetObject("menosCor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MenuContar {
             get {
                 object obj = ResourceManager.GetObject("MenuContar", resourceCulture);
@@ -574,6 +614,16 @@ namespace Ellie.Properties {
         internal static System.Drawing.Bitmap menuJuntarCores {
             get {
                 object obj = ResourceManager.GetObject("menuJuntarCores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MessageBoard {
+            get {
+                object obj = ResourceManager.GetObject("MessageBoard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

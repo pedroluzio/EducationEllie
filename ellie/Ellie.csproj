@@ -16,7 +16,7 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>sftp://frs.sourceforge.net:22/home/frs/project/educationellie/</PublishUrl>
+    <PublishUrl>C:\Users\pluzio\Desktop\publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -29,7 +29,7 @@
     <InstallUrl>https://sourceforge.net/projects/educationellie/files/latest/download%3fsource=files/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>0.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -79,7 +79,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>DED8E380E5A4A7AF3C6096815EEE720C8D35C8D7</ManifestCertificateThumbprint>
@@ -89,6 +89,12 @@
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>teste.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -179,6 +185,12 @@
     <Compile Include="frmJuntarCores.Designer.cs">
       <DependentUpon>frmJuntarCores.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoard.Designer.cs">
+      <DependentUpon>MessageBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persistencia.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,6 +221,9 @@
     <EmbeddedResource Include="frmJuntarCores.resx">
       <DependentUpon>frmJuntarCores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoard.resx">
+      <DependentUpon>MessageBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -233,6 +248,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="teste.snk" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -364,6 +380,11 @@
   <ItemGroup>
     <Content Include="Icon.ico" />
     <Content Include="mascote.ico" />
+    <None Include="Resources\menosCor.png" />
+    <None Include="Resources\maisCor.png" />
+    <None Include="Resources\balaoContas.png" />
+    <None Include="Resources\FundoBalao.png" />
+    <None Include="Resources\MessageBoard.png" />
     <None Include="Resources\menuJuntarCores.png" />
     <None Include="Resources\corVermelho.png" />
     <None Include="Resources\corVerde.png" />

@@ -27,7 +27,7 @@ namespace Ellie
             if (_text == "início")            
                 label1.Text = "Bem Vindo!";
             if (_text == "ajuda nome")
-                label1.Text = "Para te poder ajudar";
+                label1.Text = "Preciso de saber o teu nome";
             
         }
 
@@ -62,7 +62,7 @@ namespace Ellie
                 }
                 if (qt == 0)
                 {
-                    label1.Text = "Quero saber o teu nome.";
+                    label1.Text = "Para podermos brincar";
                     qt++;
                 }
             }

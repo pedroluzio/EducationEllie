@@ -33,6 +33,10 @@ namespace Ellie
                 temp = temp.Substring(temp.IndexOf("multiplicacao") + 14, temp.IndexOf("\r\n", temp.IndexOf("multiplicacao")) - (temp.IndexOf("multiplicacao") + 14));
                 nudContasMultiplicacao.Value = Convert.ToInt32(temp);
 
+                temp = text.Substring(text.IndexOf("[contas]") + 10);
+                temp = temp.Substring(temp.IndexOf("tempo") + 6, temp.IndexOf("\r\n", temp.IndexOf("tempo")) - (temp.IndexOf("tempo") + 6));
+                nudTempoAjuda.Value = Convert.ToInt32(temp);
+
                 temp = text.Substring(text.IndexOf("[geral]") + 9);
                 temp = temp.Substring(temp.IndexOf("som") + 4, temp.IndexOf("\r\n", temp.IndexOf("som")) - (temp.IndexOf("som") + 4));
                 cheSom.Checked = Convert.ToBoolean(temp);
@@ -52,6 +56,7 @@ namespace Ellie
             sb.AppendLine("mudar=" + nudContarMudar.Value);
             sb.AppendLine("[contas]");
             sb.AppendLine("multiplicacao=" + nudContasMultiplicacao.Value);
+            sb.AppendLine("tempo=" + nudTempoAjuda.Value);
             sb.AppendLine("********");
 
             TextWriter tw = new StreamWriter("config.ini");

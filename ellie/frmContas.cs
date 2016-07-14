@@ -166,6 +166,8 @@ namespace Ellie
             flpAjuda3.Controls.Clear();
             flpAjuda4.Controls.Clear();
             cheio = false;
+            aumenta = true;
+            zoom = 0;
             timer1.Enabled = true;            
         }
 
@@ -244,43 +246,51 @@ namespace Ellie
         #endregion
         private void btnEnvia_Click(object sender, EventArgs e)
         {
-            switch (sinal)
+            if (lblResultado.Text.Length>0)
             {
-                case 1:
-                    if (n1 + n2 == Convert.ToInt32(lblResultado.Text))
-                        certo();
-                    else
-                        errado();
-                    break;
+                switch (sinal)
+                {
+                    case 1:
+                        if (n1 + n2 == Convert.ToInt32(lblResultado.Text))
+                            certo();
+                        else
+                            errado();
+                        break;
 
-                case 2:
-                    if (n1 - n2 == Convert.ToInt32(lblResultado.Text))
-                        certo();
-                    else
-                        errado();
-                    break;
-                case 3:
-                    if (n1 * n2 == Convert.ToInt32(lblResultado.Text))
-                        certo();
-                    else
-                        errado();
-                    break;
+                    case 2:
+                        if (n1 - n2 == Convert.ToInt32(lblResultado.Text))
+                            certo();
+                        else
+                            errado();
+                        break;
+                    case 3:
+                        if (n1 * n2 == Convert.ToInt32(lblResultado.Text))
+                            certo();
+                        else
+                            errado();
+                        break;
+                }
+
+                flpAjuda1.Controls.Clear();
+                flpAjuda2.Controls.Clear();
+                flpAjuda3.Controls.Clear();
+                flpAjuda4.Controls.Clear(); 
             }
-
-            flpAjuda1.Controls.Clear();
-            flpAjuda2.Controls.Clear();
-            flpAjuda3.Controls.Clear();
-            flpAjuda4.Controls.Clear();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Queres mesmo sair?", "Sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            MessageBoard msg = new MessageBoard("Queres mesmo sair?");
+
+            if (msg.ShowDialog() == System.Windows.Forms.DialogResult.Yes)
                 this.Close();
         }
 
         private void contas_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(this.Location.X, this.Location.Y - 42);
+            this.BackColor = Color.Gray;
+            this.TransparencyKey = Color.Gray;
             try
             {
                 StreamReader sr = new StreamReader("config.ini");
@@ -291,6 +301,19 @@ namespace Ellie
                 sr.Close();
             }
             catch { }
+
+
+            try
+            {
+                StreamReader sr = new StreamReader("config.ini");
+                string text = sr.ReadToEnd();
+                string temp = text.Substring(text.IndexOf("[contas]") + 10);
+                temp = temp.Substring(temp.IndexOf("tempo") + 6, temp.IndexOf("\r\n", temp.IndexOf("tempo")) - (temp.IndexOf("tempo") + 6));
+                timer2.Interval = Convert.ToInt32(temp) * 1000;
+                sr.Close();
+            }
+            catch { }
+
             System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
             privateFonts.AddFontFile("Crayon.ttf");
             System.Drawing.Font font = new Font(privateFonts.Families[0], 20);
@@ -305,6 +328,18 @@ namespace Ellie
             lblResultado.Text = " ";
         }
 
+        int zoom=1;
+        Boolean aumenta = true;
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (!timer1.Enabled)
+            {
+                picHelp.Visible = !picHelp.Visible;
+                picBalao.Visible = !picBalao.Visible; 
+            }
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (sinal == 1)
@@ -315,14 +350,36 @@ namespace Ellie
                     myButton.Size = new System.Drawing.Size(30, 30);
                     flpAjuda1.Controls.Add(myButton);
                 }
+                else if (aumenta && zoom < 10)
+                {
+                        picSinal.Image = Properties.Resources.maisCor;
+                    
+                    timer1.Interval = 250;
+                    picSinal.Size = new Size(picSinal.Width + 2, picSinal.Height + 2);
+                    picSinal.Location = new Point(picSinal.Location.X - 1, picSinal.Location.Y - 1);
+                    zoom++;
+                    if (zoom==10)
+                    {
+                        aumenta = !aumenta; 
+                    }
+                }
+                else if (!aumenta && zoom >0)
+                {
+                    timer1.Interval = 250;
+                    picSinal.Size = new Size(picSinal.Width - 2, picSinal.Height- 2);
+                    picSinal.Location = new Point(picSinal.Location.X + 1, picSinal.Location.Y + 1);
+                    zoom--;
+                }
                 else if (flpAjuda2.Controls.Count < n2)
                 {
+                        picSinal.Image = Properties.Resources.mais;
+                    timer1.Interval = 750;
                     myButtonObject myButton = new myButtonObject();
                     myButton.Size = new System.Drawing.Size(30, 30);
                     flpAjuda2.Controls.Add(myButton);
                 }
                 else
-                 timer1.Enabled = false;
+                    timer1.Enabled = false;
             }
             else if (sinal == 2)
             {
@@ -332,8 +389,29 @@ namespace Ellie
                     myButton.Size = new System.Drawing.Size(30, 30);
                     flpAjuda1.Controls.Add(myButton);
                 }
+                else if (aumenta && zoom < 10)
+                {
+                        picSinal.Image = Properties.Resources.menosCor;
+                    timer1.Interval = 250;
+                    picSinal.Size = new Size(picSinal.Width + 2, picSinal.Height + 2);
+                    picSinal.Location = new Point(picSinal.Location.X - 1, picSinal.Location.Y - 1);
+                    zoom++;
+                    if (zoom == 10)
+                    {
+                        aumenta = !aumenta;
+                    }
+                }
+                else if (!aumenta && zoom > 0)
+                {
+                    timer1.Interval = 250;
+                    picSinal.Size = new Size(picSinal.Width - 2, picSinal.Height - 2);
+                    picSinal.Location = new Point(picSinal.Location.X + 1, picSinal.Location.Y + 1);
+                    zoom--;
+                }
                 else if (flpAjuda1.Controls.Count != (n1 - n2) && flpAjuda1.Controls.Count!=0)
                 {
+                        picSinal.Image = Properties.Resources.menos;
+                    timer1.Interval = 750;
                     cheio = true;
                     flpAjuda1.Controls.RemoveAt(flpAjuda1.Controls.Count - 1);
                 }

@@ -32,9 +32,7 @@
             this.btnContar = new System.Windows.Forms.Button();
             this.btnContas = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.pic_opcoes = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnSom = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnJuntarCores = new System.Windows.Forms.Button();
@@ -93,18 +91,6 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(671, 154);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(331, 47);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "(Not Click Me!!)\r\nVai ser para ver se há novas versões";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Visible = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // pic_opcoes
             // 
             this.pic_opcoes.BackColor = System.Drawing.Color.Transparent;
@@ -116,18 +102,6 @@
             this.pic_opcoes.TabIndex = 20;
             this.pic_opcoes.TabStop = false;
             this.pic_opcoes.Click += new System.EventHandler(this.pic_opcoes_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(671, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(331, 241);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "(Click Me!!)\r\nEste form irá aparecer aquando do arranque da aplicação";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnSom
             // 
@@ -185,9 +159,7 @@
             this.Controls.Add(this.btnJuntarCores);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSom);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pic_opcoes);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.btnContas);
             this.Controls.Add(this.btnContar);
@@ -209,9 +181,7 @@
         private System.Windows.Forms.Button btnContar;
         private System.Windows.Forms.Button btnContas;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pic_opcoes;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnJuntarCores;

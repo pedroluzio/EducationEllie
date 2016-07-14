@@ -445,7 +445,7 @@
             this.lblNomeScore.BackColor = System.Drawing.Color.Transparent;
             this.lblNomeScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblNomeScore.ForeColor = System.Drawing.Color.White;
-            this.lblNomeScore.Location = new System.Drawing.Point(596, 37);
+            this.lblNomeScore.Location = new System.Drawing.Point(596, 33);
             this.lblNomeScore.Name = "lblNomeScore";
             this.lblNomeScore.Size = new System.Drawing.Size(407, 32);
             this.lblNomeScore.TabIndex = 31;

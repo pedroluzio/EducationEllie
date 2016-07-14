@@ -49,69 +49,71 @@ namespace Ellie
             sr.Close();
 
 
+            
+            WebRequest wr = WebRequest.Create(new Uri("http://pedroluzio.github.io/EducationEllie/version.txt"));
+            WebResponse ws = wr.GetResponse();
+            StreamReader srr = new StreamReader(ws.GetResponseStream());
+
+            string currentVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            string newVersion = srr.ReadLine();
+            MessageBox.Show(currentVersion);
+            if (currentVersion != newVersion)
+            {
+                
+                if (MessageBox.Show("Há uma nova versão! Deseja fazer o download?","Nova versão",MessageBoxButtons.YesNo)==DialogResult.Yes)
+                {
+                    WebClient Client = new WebClient();
+                    FileInfo file = new FileInfo("version.txt");
+                    Client.DownloadFile("https://github.com/pedroluzio/EducationEllie/raw/master/ellie/bin/Debug/Ellie.exe", "new.exe");                    
+                    Process.Start("update.bat"); 
+                }
+                
+               
+            }
+
+
             frmMascote mascote = new frmMascote("início");
             mascote.ShowDialog();
 
-            /*MailMessage msg = new MailMessage();
-
-            msg.From = new MailAddress("education.ellie.project@gmail.com");
-            msg.To.Add("education.ellie.project@gmail.com");
-            string culture = CultureInfo.CurrentCulture.EnglishName;
-            string country = culture.Substring(culture.IndexOf('(') + 1, culture.LastIndexOf(')') - culture.IndexOf('(') - 1);
-            msg.Subject = "New Access - " + country;
-            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
-            msg.Body = userName + Environment.NewLine + myIP + Environment.NewLine + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
-            SmtpClient client = new SmtpClient();
-
-            client.UseDefaultCredentials = true;
-            client.Host = "smtp.gmail.com";
-            client.Port = 587;
-            client.EnableSsl = true;
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.Credentials = new NetworkCredential("education.ellie.project@gmail.com", "educationellie123");
-            client.Timeout = 20000;
-            try
-            {
-                client.Send(msg);
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                msg.Dispose();
-            }
-
-            
-            
-
-            string sql = "INSERT INTO access(country, user, date, ip)VALUES('"+country+"', '"+userName+"', '"+ DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "','"+myIP+"'); ";
-
-            MySqlConnectionStringBuilder conn_string = new MySqlConnectionStringBuilder();
-            conn_string.Server = "mysql3.gear.host";
-            conn_string.UserID = "access";
-            conn_string.Password = "Ar4ebL2_?1nC";
-            conn_string.Database = "access";
-
-            MySqlConnection conn = new MySqlConnection(conn_string.ToString());
-            //MySqlCommand cmd = conn.CreateCommand();
 
             try
             {
-                conn.Open();
+                MailMessage msg = new MailMessage();
 
+                msg.From = new MailAddress("education.ellie.project@gmail.com");
+                msg.To.Add("education.ellie.project@gmail.com");
+                string culture = CultureInfo.CurrentCulture.EnglishName;
+                string country = culture.Substring(culture.IndexOf('(') + 1, culture.LastIndexOf(')') - culture.IndexOf('(') - 1);
+                msg.Subject = "New Access - " + country;
+                string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+                string myIP = Dns.GetHostByName(Dns.GetHostName()).AddressList[0].ToString();
+                msg.Body = userName + Environment.NewLine + myIP + Environment.NewLine + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+                SmtpClient client = new SmtpClient();
 
-                MySqlCommand MyCommand2 = new MySqlCommand(sql, conn);
-                MySqlDataReader MyReader2;
-                MyReader2 = MyCommand2.ExecuteReader();
-                while (MyReader2.Read())
+                client.UseDefaultCredentials = true;
+                client.Host = "smtp.gmail.com";
+                client.Port = 587;
+                client.EnableSsl = true;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.Credentials = new NetworkCredential("education.ellie.project@gmail.com", "educationellie123");
+                client.Timeout = 20000;
+                try
                 {
+                    client.Send(msg);
                 }
-                conn.Close();
+                catch
+                {
+
+                }
+                finally
+                {
+                    msg.Dispose();
+                }
             }
-            catch { }*/
+            catch { }
+                        
+            
+
 
 
 
@@ -136,7 +138,10 @@ namespace Ellie
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Queres mesmo sair?", "Sair?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+
+            MessageBoard msg = new MessageBoard("Queres mesmo sair?");
+
+            if (msg.ShowDialog() == System.Windows.Forms.DialogResult.Yes)
                 this.Close();
         }
 
@@ -147,25 +152,7 @@ namespace Ellie
 
         private void button5_Click(object sender, EventArgs e)
         {
-            /*WebRequest wr = WebRequest.Create(new Uri("http://pappl.bugs3.com/version.txt"));
-            WebResponse ws = wr.GetResponse();
-            StreamReader sr = new StreamReader(ws.GetResponseStream());
-
-            string currentVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            string newVersion = sr.ReadLine();
-            if (currentVersion == newVersion)
-                MessageBox.Show("Tem a versão mais recente");
-            else
-            {
-                MessageBox.Show("Há uma nova versão!");
-                WebClient Client = new WebClient();
-                FileInfo file = new FileInfo("version.txt");
-                Client.DownloadFile("http://pappl.bugs3.com/version.txt", file.FullName);
-                MessageBox.Show("Downloaded!");
-
-                Process.Start(file.FullName);
-                this.Close();
-            }*/
+            /**/
 
         }
 

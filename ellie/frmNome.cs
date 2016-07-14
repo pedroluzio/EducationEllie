@@ -67,7 +67,7 @@ namespace Ellie
             
             lblTitulo.Font = new Font(privateFonts.Families[0], 50);
 
-
+            lblNome.Font = new Font(privateFonts.Families[0], 40);
 
         }
 
