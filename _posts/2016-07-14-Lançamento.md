@@ -6,7 +6,7 @@ categories: others
 ---
 #Lançamento
 
-![Ellie](mascoteGif1.gif);
+![Ellie](mascoreGif1.gif);
 
 
 A aplicação já está disponível para `Download` [Aqui](https://sourceforge.net/projects/educationellie/files/latest/download "Aqui")
