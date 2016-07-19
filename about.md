@@ -20,7 +20,7 @@ O nome Ellie vem da mascote do software que é uma coruja (símbolo do conhecime
 Originalmente, o software foi desenvolvido por Pedro Luzio @pedroluzio, estudante de programação em Portugal
 em conjunto com Janynne Gomes @devnetgomez, professora universitária de programação no Brasil
 
-### Suporte ou Contato
+### Suporte ou Contacto
 Tem problemas com software? Contate [education.ellie.project@gmail.com](education.ellie.project@gmail.com) e nós vamos ajudá-lo a resolver o problema.
 
 ***
