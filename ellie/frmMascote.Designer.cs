@@ -51,10 +51,10 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Ellie.Properties.Resources.next;
-            this.pictureBox3.Location = new System.Drawing.Point(236, 165);
+            this.pictureBox3.Image = global::Ellie.Properties.Resources.avancar;
+            this.pictureBox3.Location = new System.Drawing.Point(213, 324);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 25);
+            this.pictureBox3.Size = new System.Drawing.Size(104, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -82,7 +82,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // mascote
+            // frmMascote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +92,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "mascote";
+            this.Name = "frmMascote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mascote";
             this.Load += new System.EventHandler(this.mascote_Load);

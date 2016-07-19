@@ -56,7 +56,6 @@ namespace Ellie
 
             string currentVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             string newVersion = srr.ReadLine();
-            MessageBox.Show(currentVersion);
             if (currentVersion != newVersion)
             {
                 

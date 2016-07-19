@@ -124,6 +124,17 @@ namespace Ellie
                     break;
             }
 
+
+            x1 = false;
+            x2 = false;
+            x3 = false;
+            x4 = false;
+            picX1.Visible = false;
+            picX2.Visible = false;
+            picX3.Visible = false;
+            picX4.Visible = false;
+            timer1.Interval = 750;
+
         }
 
         public void certo()
@@ -140,7 +151,8 @@ namespace Ellie
             btnApaga.PerformClick();
             mudaNumeros();
             lblNomeScore.Text = Dados.geraResultado(true, true);
-
+            timer2.Enabled = false;
+            timer2.Enabled = true;            
         }
 
         public void errado()
@@ -157,6 +169,8 @@ namespace Ellie
             btnApaga.PerformClick();
             mudaNumeros();
             lblNomeScore.Text = Dados.geraResultado(true, false);
+            timer2.Enabled = false;
+            timer2.Enabled = true;
         }
 
         private void ajuda()
@@ -178,8 +192,7 @@ namespace Ellie
                 Graphics graphics = e.Graphics;
                 Pen myPen = new Pen(Color.Black);
                 Random random = new Random();
-                string color = String.Format("#{0:X6}", random.Next(0x1000000));
-                System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml(color));
+                System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.ColorTranslator.FromHtml("#1EA42A"));
                 graphics.FillEllipse(myBrush, new Rectangle(0, 0, 28, 28));
                 myPen.Dispose();
             }
@@ -329,7 +342,8 @@ namespace Ellie
         }
 
         int zoom=1;
-        Boolean aumenta = true;
+        Boolean aumenta = true, x1 = false, x2 = false, x3 = false, x4 = false;
+       
 
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -420,30 +434,130 @@ namespace Ellie
             }
             else if (sinal == 3)
             {
+                #region X1
                 if (flpAjuda1.Controls.Count < n1)
                 {
+                    x1 = true;
                     myButtonObject myButton = new myButtonObject();
                     myButton.Size = new System.Drawing.Size(30, 30);
-                    flpAjuda1.Controls.Add(myButton);
+                    flpAjuda1.Controls.Add(myButton);                    
                 }
+                else if (x1 && aumenta && zoom < 10)
+                {
+                    picX1.Visible = true;                 
+                    timer1.Interval = 250;
+                    picX1.Size = new Size(picX1.Width + 2, picX1.Height + 2);
+                    picX1.Location = new Point(picX1.Location.X - 1, picX1.Location.Y - 1);
+                    zoom++;
+                    if (zoom == 10)
+                    {
+                        aumenta = !aumenta;
+                    }
+                }
+                else if (x1 && !aumenta && zoom > 0)
+                {
+                    timer1.Interval = 250;
+                    picX1.Size = new Size(picX1.Width - 2, picX1.Height - 2);
+                    picX1.Location = new Point(picX1.Location.X + 1, picX1.Location.Y + 1);
+                    zoom--;
+                }
+                #endregion
+                #region X2
                 else if (flpAjuda2.Controls.Count < n1 && n2 >= 2)
                 {
+                    x1 = false;
+                    x2 = true;
+                    timer1.Interval = 750;
+                    aumenta = true;
+                    zoom = 0;
                     myButtonObject myButton = new myButtonObject();
                     myButton.Size = new System.Drawing.Size(30, 30);
                     flpAjuda2.Controls.Add(myButton);
                 }
+                else if ( x2 && aumenta && zoom < 10)
+                {
+                    picX2.Visible = true;
+                    timer1.Interval = 250;
+                    picX2.Size = new Size(picX2.Width + 2, picX2.Height + 2);
+                    picX2.Location = new Point(picX2.Location.X - 1, picX2.Location.Y - 1);
+                    zoom++;
+                    if (zoom == 10)
+                    {
+                        aumenta = !aumenta;
+                    }
+                }
+                else if (x2 && !aumenta && zoom > 0)
+                {
+                    timer1.Interval = 250;
+                    picX2.Size = new Size(picX2.Width - 2, picX2.Height - 2);
+                    picX2.Location = new Point(picX2.Location.X + 1, picX2.Location.Y + 1);
+                    zoom--;
+                }
+                #endregion
+                #region X3
                 else if (flpAjuda3.Controls.Count < n1 && n2 >= 3)
                 {
+                    x2 = false;
+                    x3 = true;
+                    timer1.Interval = 750;
+                    aumenta = true;
+                    zoom = 0;
                     myButtonObject myButton = new myButtonObject();
                     myButton.Size = new System.Drawing.Size(30, 30);
                     flpAjuda3.Controls.Add(myButton);
                 }
+                else if ( x3 && aumenta && zoom < 10)
+                {
+                    picX3.Visible = true;
+                    timer1.Interval = 250;
+                    picX3.Size = new Size(picX3.Width + 2, picX3.Height + 2);
+                    picX3.Location = new Point(picX3.Location.X - 1, picX3.Location.Y - 1);
+                    zoom++;
+                    if (zoom == 10)
+                    {
+                        aumenta = !aumenta;
+                    }
+                }
+                else if (x3 && !aumenta && zoom > 0)
+                {
+                    timer1.Interval = 250;
+                    picX3.Size = new Size(picX3.Width - 2, picX3.Height - 2);
+                    picX3.Location = new Point(picX3.Location.X + 1, picX3.Location.Y + 1);
+                    zoom--;
+                }
+                #endregion
+                #region X4
                 else if (flpAjuda4.Controls.Count < n1 && n2 >= 4)
                 {
+                    x3 = false;
+                    x4 = true;
+                    timer1.Interval = 750;
+                    aumenta = true;
+                    zoom = 0;
                     myButtonObject myButton = new myButtonObject();
                     myButton.Size = new System.Drawing.Size(30, 30);
                     flpAjuda4.Controls.Add(myButton);
                 }
+                else if (x4 && aumenta && zoom < 10)
+                {
+                    picX4.Visible = true;
+                    timer1.Interval = 250;
+                    picX4.Size = new Size(picX4.Width + 2, picX4.Height + 2);
+                    picX4.Location = new Point(picX4.Location.X - 1, picX4.Location.Y - 1);
+                    zoom++;
+                    if (zoom == 10)
+                    {
+                        aumenta = !aumenta;
+                    }
+                }
+                else if (x4 && !aumenta && zoom > 0)
+                {
+                    timer1.Interval = 250;
+                    picX4.Size = new Size(picX4.Width - 2, picX4.Height - 2);
+                    picX4.Location = new Point(picX4.Location.X + 1, picX4.Location.Y + 1);
+                    zoom--;
+                }
+                #endregion
                 else
                     timer1.Enabled = false;
                     

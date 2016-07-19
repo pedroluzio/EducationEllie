@@ -63,6 +63,10 @@
             this.lblNomeScore = new System.Windows.Forms.Label();
             this.picBalao = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.picX1 = new System.Windows.Forms.PictureBox();
+            this.picX2 = new System.Windows.Forms.PictureBox();
+            this.picX4 = new System.Windows.Forms.PictureBox();
+            this.picX3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,6 +77,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picEllie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBalao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picX2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picX4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picX3)).BeginInit();
             this.SuspendLayout();
             // 
             // button11
@@ -525,7 +533,7 @@
             this.flpAjuda1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpAjuda1.BackColor = System.Drawing.Color.Transparent;
-            this.flpAjuda1.Location = new System.Drawing.Point(81, 341);
+            this.flpAjuda1.Location = new System.Drawing.Point(132, 341);
             this.flpAjuda1.Name = "flpAjuda1";
             this.flpAjuda1.Size = new System.Drawing.Size(368, 35);
             this.flpAjuda1.TabIndex = 33;
@@ -535,7 +543,7 @@
             this.flpAjuda2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpAjuda2.BackColor = System.Drawing.Color.Transparent;
-            this.flpAjuda2.Location = new System.Drawing.Point(81, 382);
+            this.flpAjuda2.Location = new System.Drawing.Point(132, 382);
             this.flpAjuda2.Name = "flpAjuda2";
             this.flpAjuda2.Size = new System.Drawing.Size(368, 35);
             this.flpAjuda2.TabIndex = 34;
@@ -545,7 +553,7 @@
             this.flpAjuda3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpAjuda3.BackColor = System.Drawing.Color.Transparent;
-            this.flpAjuda3.Location = new System.Drawing.Point(81, 423);
+            this.flpAjuda3.Location = new System.Drawing.Point(132, 423);
             this.flpAjuda3.Name = "flpAjuda3";
             this.flpAjuda3.Size = new System.Drawing.Size(368, 35);
             this.flpAjuda3.TabIndex = 36;
@@ -555,7 +563,7 @@
             this.flpAjuda4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpAjuda4.BackColor = System.Drawing.Color.Transparent;
-            this.flpAjuda4.Location = new System.Drawing.Point(81, 464);
+            this.flpAjuda4.Location = new System.Drawing.Point(132, 464);
             this.flpAjuda4.Name = "flpAjuda4";
             this.flpAjuda4.Size = new System.Drawing.Size(368, 35);
             this.flpAjuda4.TabIndex = 35;
@@ -597,6 +605,54 @@
             this.timer2.Interval = 3000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // picX1
+            // 
+            this.picX1.BackColor = System.Drawing.Color.Transparent;
+            this.picX1.Image = global::Ellie.Properties.Resources.x1;
+            this.picX1.Location = new System.Drawing.Point(54, 341);
+            this.picX1.Name = "picX1";
+            this.picX1.Size = new System.Drawing.Size(60, 30);
+            this.picX1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picX1.TabIndex = 38;
+            this.picX1.TabStop = false;
+            this.picX1.Visible = false;
+            // 
+            // picX2
+            // 
+            this.picX2.BackColor = System.Drawing.Color.Transparent;
+            this.picX2.Image = global::Ellie.Properties.Resources.x2;
+            this.picX2.Location = new System.Drawing.Point(54, 382);
+            this.picX2.Name = "picX2";
+            this.picX2.Size = new System.Drawing.Size(60, 30);
+            this.picX2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picX2.TabIndex = 39;
+            this.picX2.TabStop = false;
+            this.picX2.Visible = false;
+            // 
+            // picX4
+            // 
+            this.picX4.BackColor = System.Drawing.Color.Transparent;
+            this.picX4.Image = global::Ellie.Properties.Resources.x4;
+            this.picX4.Location = new System.Drawing.Point(54, 464);
+            this.picX4.Name = "picX4";
+            this.picX4.Size = new System.Drawing.Size(60, 30);
+            this.picX4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picX4.TabIndex = 41;
+            this.picX4.TabStop = false;
+            this.picX4.Visible = false;
+            // 
+            // picX3
+            // 
+            this.picX3.BackColor = System.Drawing.Color.Transparent;
+            this.picX3.Image = global::Ellie.Properties.Resources.x3;
+            this.picX3.Location = new System.Drawing.Point(54, 423);
+            this.picX3.Name = "picX3";
+            this.picX3.Size = new System.Drawing.Size(60, 30);
+            this.picX3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picX3.TabIndex = 40;
+            this.picX3.TabStop = false;
+            this.picX3.Visible = false;
+            // 
             // frmContas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,6 +660,10 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoBalao;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1040, 650);
+            this.Controls.Add(this.picX4);
+            this.Controls.Add(this.picX3);
+            this.Controls.Add(this.picX2);
+            this.Controls.Add(this.picX1);
             this.Controls.Add(this.picBalao);
             this.Controls.Add(this.flpAjuda3);
             this.Controls.Add(this.flpAjuda4);
@@ -643,6 +703,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picEllie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBalao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picX2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picX4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picX3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,5 +748,9 @@
         private System.Windows.Forms.Label lblNomeScore;
         private System.Windows.Forms.PictureBox picBalao;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox picX1;
+        private System.Windows.Forms.PictureBox picX2;
+        private System.Windows.Forms.PictureBox picX4;
+        private System.Windows.Forms.PictureBox picX3;
     }
 }

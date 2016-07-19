@@ -65,7 +65,7 @@ namespace Ellie
             flowLayoutPanel2.Controls.Add(spaceButton);
 
             
-            lblTitulo.Font = new Font(privateFonts.Families[0], 50);
+            
 
             lblNome.Font = new Font(privateFonts.Families[0], 40);
 
