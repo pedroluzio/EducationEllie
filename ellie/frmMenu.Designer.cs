@@ -49,7 +49,7 @@
             this.btnContar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnContar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContar.Location = new System.Drawing.Point(92, 101);
+            this.btnContar.Location = new System.Drawing.Point(187, 222);
             this.btnContar.Margin = new System.Windows.Forms.Padding(50);
             this.btnContar.Name = "btnContar";
             this.btnContar.Size = new System.Drawing.Size(100, 100);
@@ -66,7 +66,7 @@
             this.btnContas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnContas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContas.Location = new System.Drawing.Point(228, 234);
+            this.btnContas.Location = new System.Drawing.Point(472, 222);
             this.btnContas.Margin = new System.Windows.Forms.Padding(50);
             this.btnContas.Name = "btnContas";
             this.btnContas.Size = new System.Drawing.Size(100, 100);
@@ -141,7 +141,7 @@
             this.btnJuntarCores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnJuntarCores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJuntarCores.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJuntarCores.Location = new System.Drawing.Point(363, 101);
+            this.btnJuntarCores.Location = new System.Drawing.Point(737, 222);
             this.btnJuntarCores.Margin = new System.Windows.Forms.Padding(50);
             this.btnJuntarCores.Name = "btnJuntarCores";
             this.btnJuntarCores.Size = new System.Drawing.Size(100, 100);
