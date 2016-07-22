@@ -64,6 +64,9 @@ namespace Ellie
                     WebClient Client = new WebClient();
                     FileInfo file = new FileInfo("version.txt");
                     Client.DownloadFile("https://github.com/pedroluzio/EducationEllie/raw/master/ellie/bin/Debug/Ellie.exe", "new.exe");                    
+                    string text1 = File.ReadAllText("Ellie.exe.manifest");
+                    text1 = text1.Replace(currentVersion, newVersion);
+                    File.WriteAllText("Ellie.exe.manifest", text1);
                     Process.Start("update.bat"); 
                 }
                 
