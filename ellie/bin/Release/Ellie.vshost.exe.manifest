@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Ellie.exe" version="0.0.1.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Ellie.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="mascote.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Ellie" version="0.2.1.0" publicKeyToken="9F00384DF60F6C39" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Ellie" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Ellie.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ellie.exe" size="3046400">
-      <assemblyIdentity name="Ellie" version="0.2.1.0" publicKeyToken="9F00384DF60F6C39" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ellie.exe" size="4009912">
+      <assemblyIdentity name="Ellie" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/bYh3sh2A6TWXQljnYkXaIdDKqHjNRkBraZHzAleFJA=</dsig:DigestValue>
+        <dsig:DigestValue>dupmfS8I1HszQkWH1vGd+IVwHF+x2GJPBMhAly0F+Vw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EllieLogicShared.dll" size="1155072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EllieLogicShared.dll" size="1222656">
       <assemblyIdentity name="EllieLogicShared" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>O9kST+D6Cinf4o4er5bYxJOurIARGEXTS0WO+fQLfhI=</dsig:DigestValue>
+        <dsig:DigestValue>kAy/lh5CoC/r5cXwEvWI5ylLxCEa0d1fNxWK0yNDFls=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

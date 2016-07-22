@@ -62,7 +62,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblNomeScore = new System.Windows.Forms.Label();
             this.picBalao = new System.Windows.Forms.PictureBox();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timHelp = new System.Windows.Forms.Timer(this.components);
             this.picX1 = new System.Windows.Forms.PictureBox();
             this.picX2 = new System.Windows.Forms.PictureBox();
             this.picX4 = new System.Windows.Forms.PictureBox();
@@ -376,7 +376,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picNum1.BackColor = System.Drawing.Color.Transparent;
             this.picNum1.Image = global::Ellie.Properties.Resources.btn1;
-            this.picNum1.Location = new System.Drawing.Point(76, 255);
+            this.picNum1.Location = new System.Drawing.Point(76, 253);
             this.picNum1.Name = "picNum1";
             this.picNum1.Size = new System.Drawing.Size(80, 80);
             this.picNum1.TabIndex = 26;
@@ -388,7 +388,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picNum2.BackColor = System.Drawing.Color.Transparent;
             this.picNum2.Image = global::Ellie.Properties.Resources.btn1;
-            this.picNum2.Location = new System.Drawing.Point(218, 255);
+            this.picNum2.Location = new System.Drawing.Point(218, 253);
             this.picNum2.Name = "picNum2";
             this.picNum2.Size = new System.Drawing.Size(80, 80);
             this.picNum2.TabIndex = 27;
@@ -400,7 +400,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picSinal.BackColor = System.Drawing.Color.Transparent;
             this.picSinal.Image = global::Ellie.Properties.Resources.menos;
-            this.picSinal.Location = new System.Drawing.Point(167, 279);
+            this.picSinal.Location = new System.Drawing.Point(167, 277);
             this.picSinal.Name = "picSinal";
             this.picSinal.Size = new System.Drawing.Size(40, 40);
             this.picSinal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -413,7 +413,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Ellie.Properties.Resources.igual;
-            this.pictureBox5.Location = new System.Drawing.Point(299, 255);
+            this.pictureBox5.Location = new System.Drawing.Point(299, 253);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(80, 80);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -428,7 +428,7 @@
             this.lblResultado.BackColor = System.Drawing.Color.Transparent;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.ForeColor = System.Drawing.Color.White;
-            this.lblResultado.Location = new System.Drawing.Point(369, 256);
+            this.lblResultado.Location = new System.Drawing.Point(369, 254);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(70, 76);
             this.lblResultado.TabIndex = 30;
@@ -456,6 +456,8 @@
             this.btnEnvia.TabIndex = 9;
             this.btnEnvia.UseVisualStyleBackColor = false;
             this.btnEnvia.Click += new System.EventHandler(this.btnEnvia_Click);
+            this.btnEnvia.MouseLeave += new System.EventHandler(this.btnEnvia_MouseLeave);
+            this.btnEnvia.MouseHover += new System.EventHandler(this.btnEnvia_MouseHover);
             // 
             // btnApaga
             // 
@@ -533,7 +535,7 @@
             this.flpAjuda1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpAjuda1.BackColor = System.Drawing.Color.Transparent;
-            this.flpAjuda1.Location = new System.Drawing.Point(132, 341);
+            this.flpAjuda1.Location = new System.Drawing.Point(132, 343);
             this.flpAjuda1.Name = "flpAjuda1";
             this.flpAjuda1.Size = new System.Drawing.Size(368, 35);
             this.flpAjuda1.TabIndex = 33;
@@ -543,7 +545,7 @@
             this.flpAjuda2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpAjuda2.BackColor = System.Drawing.Color.Transparent;
-            this.flpAjuda2.Location = new System.Drawing.Point(132, 382);
+            this.flpAjuda2.Location = new System.Drawing.Point(132, 384);
             this.flpAjuda2.Name = "flpAjuda2";
             this.flpAjuda2.Size = new System.Drawing.Size(368, 35);
             this.flpAjuda2.TabIndex = 34;
@@ -553,7 +555,7 @@
             this.flpAjuda3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpAjuda3.BackColor = System.Drawing.Color.Transparent;
-            this.flpAjuda3.Location = new System.Drawing.Point(132, 423);
+            this.flpAjuda3.Location = new System.Drawing.Point(132, 425);
             this.flpAjuda3.Name = "flpAjuda3";
             this.flpAjuda3.Size = new System.Drawing.Size(368, 35);
             this.flpAjuda3.TabIndex = 36;
@@ -563,7 +565,7 @@
             this.flpAjuda4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpAjuda4.BackColor = System.Drawing.Color.Transparent;
-            this.flpAjuda4.Location = new System.Drawing.Point(132, 464);
+            this.flpAjuda4.Location = new System.Drawing.Point(132, 466);
             this.flpAjuda4.Name = "flpAjuda4";
             this.flpAjuda4.Size = new System.Drawing.Size(368, 35);
             this.flpAjuda4.TabIndex = 35;
@@ -599,17 +601,17 @@
             this.picBalao.TabStop = false;
             this.picBalao.Visible = false;
             // 
-            // timer2
+            // timHelp
             // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 3000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.timHelp.Enabled = true;
+            this.timHelp.Interval = 3000;
+            this.timHelp.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // picX1
             // 
             this.picX1.BackColor = System.Drawing.Color.Transparent;
             this.picX1.Image = global::Ellie.Properties.Resources.x1;
-            this.picX1.Location = new System.Drawing.Point(54, 341);
+            this.picX1.Location = new System.Drawing.Point(54, 343);
             this.picX1.Name = "picX1";
             this.picX1.Size = new System.Drawing.Size(60, 30);
             this.picX1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -621,7 +623,7 @@
             // 
             this.picX2.BackColor = System.Drawing.Color.Transparent;
             this.picX2.Image = global::Ellie.Properties.Resources.x2;
-            this.picX2.Location = new System.Drawing.Point(54, 382);
+            this.picX2.Location = new System.Drawing.Point(54, 384);
             this.picX2.Name = "picX2";
             this.picX2.Size = new System.Drawing.Size(60, 30);
             this.picX2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -633,7 +635,7 @@
             // 
             this.picX4.BackColor = System.Drawing.Color.Transparent;
             this.picX4.Image = global::Ellie.Properties.Resources.x4;
-            this.picX4.Location = new System.Drawing.Point(54, 464);
+            this.picX4.Location = new System.Drawing.Point(54, 466);
             this.picX4.Name = "picX4";
             this.picX4.Size = new System.Drawing.Size(60, 30);
             this.picX4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -645,7 +647,7 @@
             // 
             this.picX3.BackColor = System.Drawing.Color.Transparent;
             this.picX3.Image = global::Ellie.Properties.Resources.x3;
-            this.picX3.Location = new System.Drawing.Point(54, 423);
+            this.picX3.Location = new System.Drawing.Point(54, 425);
             this.picX3.Name = "picX3";
             this.picX3.Size = new System.Drawing.Size(60, 30);
             this.picX3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -747,7 +749,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblNomeScore;
         private System.Windows.Forms.PictureBox picBalao;
-        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timHelp;
         private System.Windows.Forms.PictureBox picX1;
         private System.Windows.Forms.PictureBox picX2;
         private System.Windows.Forms.PictureBox picX4;

@@ -145,34 +145,39 @@ namespace Ellie
                     }
                 }
             }            
-        }
-       
+        }     
 
 
 
         private void pic_Click(object sender, EventArgs e)
         {
-            PictureBox pic = sender as PictureBox;
-
-            pic.BorderStyle = BorderStyle.FixedSingle;
-
-            // Verifica se é a primeira jogada
-            if (corTentativa == null)
+            try
             {
-                corTentativa = pic.Image;                
+                PictureBox pic = sender as PictureBox;
+
+                pic.BorderStyle = BorderStyle.FixedSingle;
+
+                // Verifica se é a primeira jogada
+                if (corTentativa == null)
+                {
+                    corTentativa = pic.Image;
+                }
+                else
+                {
+                    int tempCerto = Convert.ToInt32(placar1.lblCertas.Text);
+                    int tempErrado = Convert.ToInt32(placar1.lblErradas.Text);
+
+                    game_juntarcores.fazerJogada(corTentativa, pic.Image);
+
+
+                    int certas = Convert.ToInt32(placar1.lblCertas.Text) - tempCerto;
+                    int erradas = Convert.ToInt32(placar1.lblErradas.Text) - tempErrado;
+                    lblNomeScore.Text = Dados.mostraComRespostas(certas, erradas);
+                    geraCor(CorPar);
+                    corTentativa = null;
+                }
             }
-            else
-            {
-                int tempCerto = Convert.ToInt32(placar1.lblCertas.Text);
-                int tempErrado = Convert.ToInt32(placar1.lblErradas.Text);
-                game_juntarcores.fazerJogada(corTentativa, pic.Image);              
-          
-                corTentativa = null;
-                int certas=Convert.ToInt32(placar1.lblCertas.Text)-tempCerto; 
-                int erradas= Convert.ToInt32(placar1.lblErradas.Text)-tempErrado;
-                lblNomeScore.Text = Dados.mostraComRespostas(certas, erradas);
-                geraCor(CorPar);
-            }            
+            catch { }       
         }
 
         private void btnSair_Click(object sender, EventArgs e)

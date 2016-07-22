@@ -151,8 +151,8 @@ namespace Ellie
             btnApaga.PerformClick();
             mudaNumeros();
             lblNomeScore.Text = Dados.geraResultado(true, true);
-            timer2.Enabled = false;
-            timer2.Enabled = true;            
+            timHelp.Enabled = false;
+            timHelp.Enabled = true;            
         }
 
         public void errado()
@@ -169,8 +169,8 @@ namespace Ellie
             btnApaga.PerformClick();
             mudaNumeros();
             lblNomeScore.Text = Dados.geraResultado(true, false);
-            timer2.Enabled = false;
-            timer2.Enabled = true;
+            timHelp.Enabled = false;
+            timHelp.Enabled = true;
         }
 
         private void ajuda()
@@ -322,7 +322,7 @@ namespace Ellie
                 string text = sr.ReadToEnd();
                 string temp = text.Substring(text.IndexOf("[contas]") + 10);
                 temp = temp.Substring(temp.IndexOf("tempo") + 6, temp.IndexOf("\r\n", temp.IndexOf("tempo")) - (temp.IndexOf("tempo") + 6));
-                timer2.Interval = Convert.ToInt32(temp) * 1000;
+                timHelp.Interval = Convert.ToInt32(temp) * 1000;
                 sr.Close();
             }
             catch { }
@@ -343,7 +343,16 @@ namespace Ellie
 
         int zoom=1;
         Boolean aumenta = true, x1 = false, x2 = false, x3 = false, x4 = false;
-       
+
+        private void btnEnvia_MouseLeave(object sender, EventArgs e)
+        {
+            timHelp.Enabled = true;
+        }
+
+        private void btnEnvia_MouseHover(object sender, EventArgs e)
+        {
+            timHelp.Enabled = false;
+        }
 
         private void timer2_Tick(object sender, EventArgs e)
         {

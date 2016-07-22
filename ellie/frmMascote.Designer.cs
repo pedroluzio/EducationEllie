@@ -42,7 +42,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(153, 34);
+            this.label1.Location = new System.Drawing.Point(180, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(220, 129);
             this.label1.TabIndex = 2;
@@ -51,8 +51,9 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Ellie.Properties.Resources.avancar;
-            this.pictureBox3.Location = new System.Drawing.Point(213, 324);
+            this.pictureBox3.Location = new System.Drawing.Point(354, 338);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(104, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -64,7 +65,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Ellie.Properties.Resources.balao;
-            this.pictureBox2.Location = new System.Drawing.Point(112, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(139, 37);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(304, 225);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,7 +76,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Ellie.Properties.Resources.mascoteGif1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 189);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 223);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 170);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -86,11 +87,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 363);
+            this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(480, 404);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMascote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

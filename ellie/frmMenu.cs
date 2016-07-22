@@ -158,7 +158,22 @@ namespace Ellie
         private void pic_opcoes_Click(object sender, EventArgs e)
         {
             frmOpcoes opcoes = new frmOpcoes();
-            opcoes.Show();
+            opcoes.ShowDialog();
+            StreamReader sr = new StreamReader("config.ini");
+            string text = sr.ReadToEnd();
+            String temp;
+
+            try
+            {
+                temp = text.Substring(text.IndexOf("[geral]") + 9);
+                temp = temp.Substring(temp.IndexOf("som") + 4, temp.IndexOf("\r\n", temp.IndexOf("som")) - (temp.IndexOf("som") + 4));
+                sound = Convert.ToBoolean(temp);
+                btnSom.PerformClick();
+                btnSom.PerformClick();
+
+            }
+            catch { }
+            sr.Close();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
