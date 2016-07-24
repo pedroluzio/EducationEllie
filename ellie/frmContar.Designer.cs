@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmContar));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             this.picImg8 = new System.Windows.Forms.PictureBox();
             this.picImg7 = new System.Windows.Forms.PictureBox();
             this.lblNomeScore = new System.Windows.Forms.Label();
+            this.timCara = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -452,6 +454,11 @@
             this.lblNomeScore.Text = "label2";
             this.lblNomeScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // timCara
+            // 
+            this.timCara.Interval = 3000;
+            this.timCara.Tick += new System.EventHandler(this.timCara_Tick);
+            // 
             // frmContar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,6 +537,7 @@
         private System.Windows.Forms.PictureBox picImg8;
         private System.Windows.Forms.PictureBox picImg7;
         private System.Windows.Forms.Label lblNomeScore;
+        private System.Windows.Forms.Timer timCara;
     }
 }
 

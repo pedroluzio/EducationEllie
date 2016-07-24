@@ -20,6 +20,7 @@ namespace Ellie
         string _text;
         Boolean aberto;
         int qt = 0;
+        Persistencia dados = new Persistencia();
         private void mascote_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.Gray;
@@ -28,7 +29,9 @@ namespace Ellie
                 label1.Text = "Bem Vindo!";
             if (_text == "ajuda nome")
                 label1.Text = "Preciso de saber o teu nome";
-            
+            if (_text == "Nome")
+                label1.Text = "Bem Vindo " + dados.getNome()+"!";
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -47,6 +50,10 @@ namespace Ellie
             {
                 frmNome nome = new frmNome();
                 nome.ShowDialog();
+                this.Close();
+            }
+            if (_text=="Nome")
+            {
                 this.Close();
             }
             if(_text=="ajuda nome")

@@ -36,6 +36,9 @@
             this.btnSom = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnJuntarCores = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_opcoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -149,6 +152,42 @@
             this.btnJuntarCores.UseVisualStyleBackColor = false;
             this.btnJuntarCores.Click += new System.EventHandler(this.btnJuntarCores_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(105, 208);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 25);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Contar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(381, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 50);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Juntar\r\nCores";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(244, 339);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 25);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Contas";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +195,9 @@
             this.BackgroundImage = global::Ellie.Properties.Resources.FundoJogos;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 566);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnJuntarCores);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSom);
@@ -173,6 +215,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_opcoes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -185,5 +228,8 @@
         private System.Windows.Forms.Button btnSom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnJuntarCores;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

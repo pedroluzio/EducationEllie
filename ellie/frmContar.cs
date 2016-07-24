@@ -92,6 +92,10 @@ namespace Ellie
             System.Drawing.Font font = new Font(privateFonts.Families[0], 20);
             lblNomeScore.Font = font;
             lblNomeScore.Text = Dados.geraResultado(false);
+
+            
+                
+
         }
 
         public int gera(int x)
@@ -128,17 +132,14 @@ namespace Ellie
         {
             if (_sound)
             {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.certo);
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.certo);                
                 player.Play();
                 Thread.Sleep(2000);
             }
             lbl_certas.Tag = Convert.ToInt32(lbl_certas.Tag) + 1;
             lbl_certas.Text = lbl_certas.Tag.ToString();
-
             desenhaAbelhas();
-
             lblNomeScore.Text = Dados.geraResultado(true, true);
-
         }
 
         public void errado()
@@ -158,9 +159,13 @@ namespace Ellie
         public void numeroEscolhido(int num)
         {
             if (num == abelhas)
+            {
                 certo();
+            }
             else
+            {
                 errado();
+            }
         }
 
         #region Evento Click dos números
@@ -230,7 +235,10 @@ namespace Ellie
             
         }
 
-       
+        private void timCara_Tick(object sender, EventArgs e)
+        {
+            timCara.Enabled = false;
+        }
     }
     
 }

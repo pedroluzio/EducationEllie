@@ -327,6 +327,18 @@ namespace Ellie
             }
             catch { }
 
+
+            try
+            {
+                StreamReader sr = new StreamReader("config.ini");
+                string text = sr.ReadToEnd();
+                string temp = text.Substring(text.IndexOf("[contas]") + 9);
+                temp = temp.Substring(temp.IndexOf("ajuda") + 6, temp.IndexOf("\r\n", temp.IndexOf("ajuda")) - (temp.IndexOf("ajuda") + 6));
+                timHelp.Enabled= Convert.ToBoolean(temp);
+                sr.Close();
+            }
+            catch { }
+
             System.Drawing.Text.PrivateFontCollection privateFonts = new PrivateFontCollection();
             privateFonts.AddFontFile("Crayon.ttf");
             System.Drawing.Font font = new Font(privateFonts.Families[0], 20);
@@ -346,12 +358,12 @@ namespace Ellie
 
         private void btnEnvia_MouseLeave(object sender, EventArgs e)
         {
-            timHelp.Enabled = true;
+            //5timHelp.Enabled = true;
         }
 
         private void btnEnvia_MouseHover(object sender, EventArgs e)
         {
-            timHelp.Enabled = false;
+            //timHelp.Enabled = false;
         }
 
         private void timer2_Tick(object sender, EventArgs e)

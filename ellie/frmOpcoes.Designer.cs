@@ -33,19 +33,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.nudTempoAjuda = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.nudContasMultiplicacao = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cheSom = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.nudTempoAjuda = new System.Windows.Forms.NumericUpDown();
+            this.cheAjuda = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudContarMudar)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTempoAjuda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudContasMultiplicacao)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTempoAjuda)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -101,6 +103,8 @@
             this.groupBox2.AutoSize = true;
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.cheAjuda);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.nudTempoAjuda);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.nudContasMultiplicacao);
@@ -109,10 +113,25 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(65, 259);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(449, 155);
+            this.groupBox2.Size = new System.Drawing.Size(449, 187);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Contas";
+            // 
+            // nudTempoAjuda
+            // 
+            this.nudTempoAjuda.Location = new System.Drawing.Point(387, 96);
+            this.nudTempoAjuda.Name = "nudTempoAjuda";
+            this.nudTempoAjuda.Size = new System.Drawing.Size(56, 30);
+            this.nudTempoAjuda.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(6, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(322, 28);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tempo para aparecer a ajuda (s):";
             // 
             // nudContasMultiplicacao
             // 
@@ -163,20 +182,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Som:";
             // 
-            // label3
+            // cheAjuda
             // 
-            this.label3.Location = new System.Drawing.Point(6, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(288, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tempo para aparecer a ajuda:";
+            this.cheAjuda.AutoSize = true;
+            this.cheAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.cheAjuda.Location = new System.Drawing.Point(81, 138);
+            this.cheAjuda.Name = "cheAjuda";
+            this.cheAjuda.Size = new System.Drawing.Size(15, 14);
+            this.cheAjuda.TabIndex = 5;
+            this.cheAjuda.UseVisualStyleBackColor = true;
             // 
-            // nudTempoAjuda
+            // label5
             // 
-            this.nudTempoAjuda.Location = new System.Drawing.Point(387, 96);
-            this.nudTempoAjuda.Name = "nudTempoAjuda";
-            this.nudTempoAjuda.Size = new System.Drawing.Size(56, 30);
-            this.nudTempoAjuda.TabIndex = 3;
+            this.label5.Location = new System.Drawing.Point(6, 129);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(437, 32);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Ajuda:";
             // 
             // frmOpcoes
             // 
@@ -198,10 +220,11 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudContarMudar)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTempoAjuda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudContasMultiplicacao)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTempoAjuda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +244,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudTempoAjuda;
+        private System.Windows.Forms.CheckBox cheAjuda;
+        private System.Windows.Forms.Label label5;
     }
 }

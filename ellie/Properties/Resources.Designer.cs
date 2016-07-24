@@ -103,6 +103,16 @@ namespace Ellie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bad {
+            get {
+                object obj = ResourceManager.GetObject("bad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap balao {
             get {
                 object obj = ResourceManager.GetObject("balao", resourceCulture);
@@ -374,6 +384,16 @@ namespace Ellie.Properties {
         internal static System.Drawing.Bitmap FundoJogos {
             get {
                 object obj = ResourceManager.GetObject("FundoJogos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap god {
+            get {
+                object obj = ResourceManager.GetObject("god", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

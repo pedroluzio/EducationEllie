@@ -53,12 +53,10 @@ namespace Ellie
             WebRequest wr = WebRequest.Create(new Uri("http://pedroluzio.github.io/EducationEllie/version.txt"));
             WebResponse ws = wr.GetResponse();
             StreamReader srr = new StreamReader(ws.GetResponseStream());
-
             string currentVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
             string newVersion = srr.ReadLine();
             if (currentVersion != newVersion)
             {
-                
                 if (MessageBox.Show("Há uma nova versão! Deseja fazer o download?","Nova versão",MessageBoxButtons.YesNo)==DialogResult.Yes)
                 {
                     WebClient Client = new WebClient();
@@ -68,9 +66,7 @@ namespace Ellie
                     text1 = text1.Replace(currentVersion, newVersion);
                     File.WriteAllText("Ellie.exe.manifest", text1);
                     Process.Start("update.bat"); 
-                }
-                
-               
+                }   
             }
 
 
@@ -78,6 +74,11 @@ namespace Ellie
             mascote.ShowDialog();
 
 
+            frmMascote mascote1 = new frmMascote("Nome");
+            mascote1.ShowDialog();
+
+
+            /*
             try
             {
                 MailMessage msg = new MailMessage();
@@ -114,7 +115,7 @@ namespace Ellie
             }
             catch { }
                         
-            
+            */
 
 
 

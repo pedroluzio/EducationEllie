@@ -29,8 +29,8 @@
     <InstallUrl>https://sourceforge.net/projects/educationellie/files/latest/download/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>1.0.1.2</ApplicationVersion>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.1.3</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -380,6 +380,8 @@
   <ItemGroup>
     <Content Include="Icon.ico" />
     <Content Include="mascote.ico" />
+    <None Include="Resources\god.png" />
+    <None Include="Resources\bad.png" />
     <None Include="Resources\avancar.png" />
     <None Include="Resources\x4.png" />
     <None Include="Resources\x3.png" />

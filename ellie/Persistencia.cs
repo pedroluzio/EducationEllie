@@ -156,5 +156,26 @@ namespace Ellie
             }
             return Label;
         }
+
+        public string getNome()
+        {
+            string Label = "";
+            using (System.Data.SQLite.SQLiteCommand com = new System.Data.SQLite.SQLiteCommand(conexao))
+            {
+                conexao.Open();
+
+                com.CommandText = "Select PlayerName FROM GameResults WHERE ID =" + idPlayer.ToString();
+                using (System.Data.SQLite.SQLiteDataReader reader = com.ExecuteReader())
+                    while (reader.Read())
+                        Label = reader["PlayerName"].ToString();
+                
+                conexao.Close();        // Close the connection to the database
+            }
+            return Label;
+        }
+
+
+
+
     }
 }
