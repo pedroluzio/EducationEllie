@@ -18,7 +18,7 @@ urls:
       url: /projects/
       icon: fa-desktop
     - text: Download
-      url: https://sourceforge.net/projects/educationellie/files/latest/download
+      url: https://sourceforge.net/projects/educationellie/files/1.0.1/Ellie_1.0.1.zip/download
       icon: fa-download
     - text: Github
       url: https://github.com/pedroluzio/EducationEllie
